@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jonathan Rodrigo Vega — Traductor jurídico e institucional especializado en francés e inglés al español. Máster en Traducción Institucional por la Universidad de Alicante.">
+<meta property="og:title" content="Jonathan Rodrigo Vega · Traductor Jurídico FR/EN → ES">
+<meta property="og:description" content="Traducciones jurídicas e institucionales con precisión terminológica. Entrega en 24–72h. Doble titulación universitaria.">
+<meta property="og:type" content="website">
+<title>Jonathan Rodrigo Vega — Traductor Jurídico &amp; Institucional | FR/EN → ES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+<style>
+/* ── RESET & VARIABLES ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2F4E;--navy-mid:#2D4A72;--navy-pale:#E8EEF5;
+  --gold:#B8923A;--gold-lt:#D4A94E;--gold-pale:#F5EDDA;
+  --paper:#FAF9F6;--paper-warm:#F3F1EA;--paper-bd:#E8E5DC;
+  --ink:#1A1A18;--ink-mid:#3D3D3A;--ink-lt:#6B6B66;--ink-ghost:#A8A89E;
+  --success:#2D6A4F;--success-bg:#E8F5EE;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --r-sm:4px;--r-md:8px;--r-lg:16px;
+  --shadow:0 1px 3px rgba(26,26,24,.08),0 4px 16px rgba(26,26,24,.05);
+  --shadow-hov:0 4px 24px rgba(26,26,24,.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--paper);color:var(--ink-mid);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px}
+
+/* ── UTILIDADES ── */
+.ey{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem}
+.ey-lt{color:var(--gold-lt)}
+.sec-title{font-family:var(--fd);font-size:clamp(1.65rem,3vw,2.3rem);font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:.9rem}
+.sec-lead{font-size:1.02rem;color:var(--ink-mid);line-height:1.78;max-width:600px;margin-bottom:2rem}
+.inner{max-width:1100px;margin:0 auto}
+
+/* ── BOTONES ── */
+.btn-p{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:#fff;font-family:var(--fb);font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:var(--r-md);border:none;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;line-height:1}
+.btn-p:hover{background:var(--gold-lt);transform:translateY(-2px);color:#fff}
+.btn-s{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--ink);font-family:var(--fb);font-size:.92rem;font-weight:500;padding:12px 24px;border-radius:var(--r-md);border:1.5px solid var(--paper-bd);text-decoration:none;transition:border-color .2s,background .2s}
+.btn-s:hover{border-color:var(--ink);background:var(--paper-warm)}
+.btn-g{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:rgba(255,255,255,.85);font-family:var(--fb);font-size:.92rem;font-weight:500;padding:11px 24px;border-radius:var(--r-md);border:1.5px solid rgba(255,255,255,.25);text-decoration:none;transition:border-color .2s}
+.btn-g:hover{border-color:rgba(255,255,255,.65)}
+.btn-lk{font-size:.88rem;font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-pale);padding-bottom:1px;transition:border-color .2s;display:inline-block}
+.btn-lk:hover{border-color:var(--gold)}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,249,246,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--paper-bd);height:62px;display:flex;align-items:center;padding:0 5%}
+.nav-in{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-family:var(--fd);font-size:1.08rem;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--ink-mid);text-decoration:none;transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.lang-sw{display:flex;gap:3px}
+.lang-sw a{font-size:.7rem;font-weight:700;padding:3px 8px;border:1px solid var(--paper-bd);border-radius:var(--r-sm);color:var(--ink-lt);text-decoration:none;transition:all .2s}
+.lang-sw a.on,.lang-sw a:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+
+/* ── HERO ── */
+.hero{min-height:92vh;display:flex;align-items:center;padding:4.5rem 5% 4rem;background:var(--paper);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:44%;height:100%;background:var(--navy);clip-path:polygon(12% 0,100% 0,100% 100%,0% 100%);z-index:0}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;width:100%;max-width:1200px;margin:0 auto}
+.hero-h1{font-family:var(--fd);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:700;line-height:1.18;color:var(--ink);margin-bottom:1.3rem}
+.hero-h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:1.02rem;color:var(--ink-mid);line-height:1.72;margin-bottom:2rem;max-width:500px}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap}
+.trit{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--ink-mid)}
+.trdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+/* Hero card */
+.hcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-lg);padding:2.25rem 2rem;color:#fff;max-width:360px;margin:0 auto}
+.hcard-av{width:68px;height:68px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:1.1rem}
+.hcard h3{font-family:var(--fd);font-size:1.18rem;color:#fff;margin-bottom:.2rem}
+.hcard>p{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:1.3rem}
+.hcb{display:flex;align-items:flex-start;gap:.6rem;background:rgba(255,255,255,.08);border-radius:var(--r-md);padding:.6rem .85rem;font-size:.78rem;color:rgba(255,255,255,.82);margin-bottom:.5rem}
+.hcb span{flex-shrink:0;font-size:.95rem}
+.lps{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1.15rem}
+.lp{font-size:.7rem;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.72)}
+
+/* ── STICKY CTA MOBILE ── */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--navy);padding:12px 20px calc(12px + env(safe-area-inset-bottom));z-index:9999;border-top:1px solid rgba(255,255,255,.1)}
+.sticky-cta a{display:block;background:var(--gold);color:#fff;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--r-md);text-align:center;text-decoration:none;transition:background .2s}
+.sticky-cta a:hover{background:var(--gold-lt)}
+
+/* ── SECCIONES ── */
+.sec{padding:5rem 5%}
+.sec-navy{background:var(--navy)}
+.sec-warm{background:var(--paper-warm)}
+.sec-white{background:var(--paper)}
+
+/* ── PROBLEMA ── */
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem;margin-bottom:2.75rem}
+.rcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:1.5rem;transition:background .25s,transform .2s}
+.rcard:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.rcard-icon{font-size:1.4rem;margin-bottom:.7rem;display:block}
+.rcard h3{font-size:.93rem;font-weight:600;color:#fff;margin-bottom:.4rem;font-family:var(--fb);line-height:1.4}
+.rcard p{font-size:.85rem;color:rgba(255,255,255,.58);line-height:1.62;margin:0}
+
+/* ── SOLUCIÓN ── */
+.sol-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start}
+.prof-av{width:104px;height:104px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:2.5rem;font-weight:700;color:var(--gold);margin-bottom:1.25rem}
+.prof-name{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:.2rem}
+.prof-title{font-size:.85rem;color:var(--ink-lt);margin-bottom:1.4rem;line-height:1.6}
+.cred{display:flex;gap:.7rem;background:#fff;border-radius:var(--r-md);padding:.9rem 1rem;border:1px solid var(--paper-bd);margin-bottom:.65rem;transition:box-shadow .2s}
+.cred:hover{box-shadow:var(--shadow)}
+.ci{font-size:1.05rem;flex-shrink:0;margin-top:.1rem}
+.ct strong{display:block;font-size:.85rem;font-weight:600;color:var(--ink)}
+.ct span{font-size:.78rem;color:var(--ink-lt)}
+.sp{display:flex;gap:1.15rem;margin-bottom:1.85rem}
+.spn{font-family:var(--fd);font-size:1.9rem;font-weight:700;color:var(--paper-bd);line-height:1;flex-shrink:0;width:2.4rem;margin-top:2px}
+.sp h4{font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;font-family:var(--fb)}
+.sp p{font-size:.88rem;color:var(--ink-mid);line-height:1.68;margin:0}
+
+/* ── SERVICIOS ── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:1.15rem;margin-bottom:2.4rem}
+.svc{background:#fff;border:1px solid var(--paper-bd);border-radius:var(--r-lg);padding:1.75rem;position:relative;overflow:hidden;transition:box-shadow .25s,transform .2s}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .25s}
+.svc:hover{box-shadow:var(--shadow-hov);transform:translateY(-4px)}
+.svc:hover::before{opacity:1}
+.stag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);padding:3px 8px;border-radius:20px;display:inline-block;margin-bottom:.9rem}
+.svc h3{font-size:1.02rem;font-weight:600;color:var(--ink);margin-bottom:.58rem;font-family:var(--fb)}
+.svc p{font-size:.86rem;color:var(--ink-mid);line-height:1.65;margin-bottom:1.2rem}
+.slangs{display:flex;gap:.35rem}
+.sl{font-size:.7rem;font-weight:600;padding:3px 8px;border-radius:20px;background:var(--navy-pale);color:var(--navy-mid)}
+.svc-cta{text-align:center;background:var(--gold-pale);border-radius:var(--r-lg);padding:2.5rem}
+.svc-cta p{font-size:1.02rem;color:var(--ink);margin-bottom:1.2rem}
+
+/* ── RECURSOS ── */
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.vi{display:flex;gap:.95rem;align-items:flex-start;margin-bottom:1.45rem}
+.vi-ic{width:40px;height:40px;border-radius:var(--r-md);background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+.vi h4{font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.2rem;font-family:var(--fb)}
+.vi p{font-size:.85rem;color:var(--ink-mid);line-height:1.62;margin:0}
+.glos{background:#fff;border:1px solid var(--paper-bd);border-radius:var(--r-lg);padding:1.5rem}
+.glos-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.15rem;flex-wrap:wrap;gap:.5rem}
+.glos-hd strong{font-size:.88rem;color:var(--ink)}
+.glos-hd span{font-size:.78rem;color:var(--ink-lt)}
+.grow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;padding:.62rem 0;border-bottom:1px solid var(--paper-warm);font-size:.8rem}
+.grow:last-of-type{border-bottom:none}
+.grow .t{font-weight:600;color:var(--ink)}
+.grow .d{color:var(--ink-mid)}
+
+/* ── AUTORIDAD ── */
+.aut-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3.75rem;align-items:start}
+.tl{position:relative}
+.tl::before{content:'';position:absolute;left:11px;top:8px;bottom:8px;width:1px;background:var(--paper-bd)}
+.tl-it{display:flex;gap:1.4rem;padding-bottom:2.2rem;position:relative}
+.tl-dot{width:23px;height:23px;border-radius:50%;background:var(--paper);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;margin-top:2px}
+.tl-dot-in{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.tl-yr{font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.22rem;display:block}
+.tl-ti{font-size:.92rem;font-weight:600;color:var(--ink);margin-bottom:.32rem;display:block}
+.tl-su{font-size:.85rem;color:var(--ink-mid);line-height:1.65}
+.stat{background:var(--paper-warm);border-radius:var(--r-lg);padding:1.4rem;margin-bottom:1.1rem}
+.stat-n{font-family:var(--fd);font-size:2.5rem;font-weight:700;color:var(--ink);line-height:1;margin-bottom:.22rem}
+.stat-l{font-size:.85rem;color:var(--ink-mid)}
+.tbg{display:flex;align-items:center;gap:.7rem;background:#fff;border:1px solid var(--paper-bd);border-radius:var(--r-md);padding:.7rem 1rem;font-size:.85rem;color:var(--ink-mid);margin-bottom:.6rem;transition:box-shadow .2s}
+.tbg:hover{box-shadow:var(--shadow)}
+.tbg span{font-size:1.05rem;flex-shrink:0}
+
+/* ── SECCIÓN FR ── */
+.fr-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3.75rem;align-items:center}
+.fr-txt p{color:rgba(255,255,255,.7);line-height:1.78;font-size:.92rem;margin-bottom:.95rem}
+.fr-cl{margin-top:1.4rem}
+.fr-c{display:flex;align-items:flex-start;gap:.7rem;font-size:.85rem;color:rgba(255,255,255,.68);margin-bottom:.62rem;line-height:1.5}
+.fr-c::before{content:'◆';color:var(--gold-lt);font-size:.58rem;margin-top:.35rem;flex-shrink:0}
+.fr-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:2rem}
+.fr-card h3{font-family:var(--fd);font-size:1.08rem;color:#fff;margin-bottom:.95rem}
+.fr-card p{font-size:.85rem;color:rgba(255,255,255,.62);line-height:1.7;margin-bottom:.75rem}
+
+/* ── TESTIMONIOS ── */
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.15rem}
+.tc{background:#fff;border:1px solid var(--paper-bd);border-radius:var(--r-lg);padding:1.75rem;transition:box-shadow .25s}
+.tc:hover{box-shadow:var(--shadow-hov)}
+.tq{font-size:.92rem;color:var(--ink-mid);line-height:1.72;margin-bottom:1.15rem;font-style:italic;position:relative}
+.tq::before{content:'\201C';font-family:var(--fd);font-size:2.4rem;color:var(--gold);line-height:.5;display:block;margin-bottom:.7rem}
+.ta{display:flex;align-items:center;gap:.7rem}
+.tav{width:40px;height:40px;border-radius:50%;background:var(--navy-pale);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--navy-mid);flex-shrink:0}
+.tn{font-size:.85rem;font-weight:600;color:var(--ink);display:block}
+.tr{font-size:.78rem;color:var(--ink-lt);display:block}
+.tp{background:var(--paper-warm);border:1.5px dashed var(--paper-bd);border-radius:var(--r-lg);padding:1.75rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:180px}
+.tp p{font-size:.88rem;color:var(--ink-ghost);line-height:1.6;margin-bottom:.8rem}
+
+/* ── FORMULARIO ── */
+.fl{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
+.ft-items{margin-top:2rem}
+.ft-item{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:1.2rem}
+.ft-ic{width:36px;height:36px;background:var(--gold-pale);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ft-item h5{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:.15rem;font-family:var(--fb)}
+.ft-item p{font-size:.8rem;color:var(--ink-mid);line-height:1.55;margin:0}
+.fw{background:#fff;border:1px solid var(--paper-bd);border-radius:var(--r-lg);padding:2rem}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:.95rem}
+.fgp{display:flex;flex-direction:column;gap:.38rem}
+.fgp.full{grid-column:1/-1}
+.fgp label{font-size:.78rem;font-weight:600;color:var(--ink)}
+.fgp input,.fgp select,.fgp textarea{width:100%;padding:.68rem .9rem;font-family:var(--fb);font-size:.9rem;color:var(--ink);background:var(--paper-warm);border:1px solid var(--paper-bd);border-radius:var(--r-md);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+.fgp input:focus,.fgp select:focus,.fgp textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(184,146,58,.12)}
+.fgp textarea{resize:vertical;min-height:95px}
+.fup{border:1.5px dashed var(--paper-bd);border-radius:var(--r-md);padding:1.2rem;text-align:center;background:var(--paper-warm);cursor:pointer;transition:border-color .2s}
+.fup:hover{border-color:var(--gold)}
+.fup strong{font-size:.85rem;color:var(--gold);display:block;margin-bottom:3px}
+.fup span{font-size:.78rem;color:var(--ink-lt)}
+.fchk{display:flex;align-items:flex-start;gap:.55rem;font-size:.8rem;color:var(--ink-mid)}
+.fchk input{width:auto;margin-top:2px;flex-shrink:0;accent-color:var(--gold)}
+.fchk a{color:var(--gold)}
+.fsub{width:100%;padding:14px;font-family:var(--fb);font-size:1rem;font-weight:700;background:var(--gold);color:#fff;border:none;border-radius:var(--r-md);cursor:pointer;transition:background .2s,transform .15s;margin-top:.5rem}
+.fsub:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.fsub:disabled{opacity:.7;cursor:not-allowed;transform:none}
+.fnote{font-size:.75rem;color:var(--ink-ghost);text-align:center;margin-top:.7rem}
+.form-success{display:none;background:var(--success-bg);border:1px solid var(--success);border-radius:var(--r-md);padding:1.25rem;text-align:center;font-size:.92rem;color:var(--success);margin-top:.75rem;font-weight:500}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:rgba(255,255,255,.52)}
+.ft-top{padding:3.75rem 5% 2.5rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.75rem;max-width:1200px;margin:0 auto}
+.ft-logo{font-family:var(--fd);font-size:1.12rem;font-weight:700;color:#fff;text-decoration:none;display:block;margin-bottom:.7rem}
+.ft-logo span{color:var(--gold)}
+.ft-brand>p{font-size:.85rem;line-height:1.65;color:rgba(255,255,255,.45);margin-bottom:.9rem}
+.ft-lngs{display:flex;gap:.4rem}
+.ft-lngs a{font-size:.7rem;font-weight:700;padding:4px 8px;border:1px solid rgba(255,255,255,.15);border-radius:var(--r-sm);color:rgba(255,255,255,.55);text-decoration:none;transition:all .2s}
+.ft-lngs a:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.ft-col h5{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.28);margin-bottom:.9rem;font-family:var(--fb)}
+.ft-col ul{list-style:none}
+.ft-col li{margin-bottom:.45rem}
+.ft-col a{font-size:.85rem;color:rgba(255,255,255,.52);text-decoration:none;transition:color .2s}
+.ft-col a:hover{color:var(--gold-lt)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.08);padding:1.5rem 5%;display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;flex-wrap:wrap;gap:1rem}
+.ft-bot p{font-size:.75rem;color:rgba(255,255,255,.28)}
+.ft-bot-cta a{font-size:.85rem;font-weight:600;background:var(--gold);color:#fff;padding:8px 20px;border-radius:var(--r-md);text-decoration:none;transition:background .2s}
+.ft-bot-cta a:hover{background:var(--gold-lt)}
+
+/* ── ANIMACIONES SCROLL ── */
+@media(prefers-reduced-motion:no-preference){
+  .fade{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+  .fade.on{opacity:1;transform:none}
+  .fade:nth-child(2){transition-delay:.1s}
+  .fade:nth-child(3){transition-delay:.2s}
+  .fade:nth-child(4){transition-delay:.3s}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .ft-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .hero::before{width:100%;height:50%;top:auto;bottom:0;clip-path:polygon(0 22%,100% 0,100% 100%,0 100%)}
+  .hero-in,.sol-grid,.rec-grid,.aut-grid,.fr-grid,.fl{grid-template-columns:1fr;gap:2.5rem}
+  .hcard{order:-1}
+  .sticky-cta{display:block}
+  body{padding-bottom:76px}
+}
+@media(max-width:600px){
+  .hero{min-height:auto;padding:3rem 5%}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{text-align:center;justify-content:center}
+  .svc-grid{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .fgp.full{grid-column:1}
+  .ft-top{grid-template-columns:1fr}
+  .ft-bot{flex-direction:column;text-align:center}
+  .tg{grid-template-columns:1fr}
+  .sec{padding:3.75rem 5%}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav role="banner">
+  <div class="nav-in">
+    <a href="#inicio" class="nav-logo">Jonathan <span>Vega</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#fr">FR</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-sw" aria-label="Selector de idioma">
+        <a href="#" class="on" lang="es">ES</a>
+        <a href="#fr" lang="fr">FR</a>
+        <a href="#" lang="en">EN</a>
+      </div>
+      <a href="#contacto" class="btn-p" style="padding:8px 18px!important;font-size:.85rem!important">Solicitar presupuesto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ STICKY CTA MOBILE ════════ -->
+<div class="sticky-cta" role="complementary" aria-label="Acceso rápido al formulario">
+  <a href="#contacto">Solicitar presupuesto →</a>
+</div>
+
+<!-- ════════ HERO ════════ -->
+<section id="inicio" class="hero" aria-label="Presentación principal">
+  <div class="hero-in">
+    <div class="hero-content">
+      <span class="ey">Traducción jurídica e institucional · FR / EN → ES</span>
+      <h1 class="hero-h1">Tus documentos legales,<br><em>sin margen de error</em></h1>
+      <p class="hero-sub">Traducciones jurídicas e institucionales con precisión terminológica garantizada. Entrega en 24–72 horas. Doble titulación universitaria especializada en derecho y organismos públicos.</p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn-p">Solicitar presupuesto →</a>
+        <a href="#servicios" class="btn-s">Ver servicios</a>
+      </div>
+      <div class="hero-trust" aria-label="Garantías principales">
+        <span class="trit"><span class="trdot" aria-hidden="true"></span>Confidencialidad total</span>
+        <span class="trit"><span class="trdot" aria-hidden="true"></span>Revisión incluida siempre</span>
+        <span class="trit"><span class="trdot" aria-hidden="true"></span>Plazo garantizado</span>
+      </div>
+    </div>
+    <div class="hcard" aria-label="Tarjeta de presentación">
+      <div class="hcard-av" aria-hidden="true">JV</div>
+      <h3>Jonathan Rodrigo Vega</h3>
+      <p>Traductor Jurídico &amp; Institucional</p>
+      <div class="hcb"><span>🎓</span>Máster en Traducción Institucional · Univ. de Alicante</div>
+      <div class="hcb"><span>📜</span>Grado en Traducción e Interpretación · UAM</div>
+      <div class="hcb"><span>⚖️</span>Especialización en derecho, EUIPO e instituciones públicas</div>
+      <div class="lps" aria-label="Combinaciones lingüísticas">
+        <span class="lp">Francés → Español</span>
+        <span class="lp">Inglés → Español</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROBLEMA ════════ -->
+<section class="sec sec-navy" aria-label="Riesgos de una mala traducción jurídica">
+  <div class="inner">
+    <span class="ey ey-lt">El riesgo real</span>
+    <h2 class="sec-title" style="color:#fff">Una mala traducción jurídica no es un error tipográfico</h2>
+    <p class="sec-lead" style="color:rgba(255,255,255,.65)">En documentos legales, notariales o ante organismos internacionales, cada término tiene consecuencias jurídicas concretas. Estas son las situaciones que los traductores no especializados no pueden evitar.</p>
+    <div class="risks" role="list">
+      <article class="rcard fade" role="listitem"><span class="rcard-icon" aria-hidden="true">⛔</span><h3>Rechazo ante la EUIPO o registros de marcas</h3><p>Un término incorrecto en una solicitud de marca europea puede costar meses de retraso y miles de euros en tasas repetidas.</p></article>
+      <article class="rcard fade" role="listitem"><span class="rcard-icon" aria-hidden="true">📑</span><h3>Documentos no admisibles ante notaría o juzgado</h3><p>Los errores terminológicos en contratos, poderes o escrituras pueden invalidar el documento completo ante las autoridades competentes.</p></article>
+      <article class="rcard fade" role="listitem"><span class="rcard-icon" aria-hidden="true">🌍</span><h3>Ambigüedades en contratos internacionales</h3><p>Un término ambiguo puede interpretarse de formas opuestas en distintos sistemas jurídicos, generando conflictos costosos y difíciles de revertir.</p></article>
+      <article class="rcard fade" role="listitem"><span class="rcard-icon" aria-hidden="true">⏱️</span><h3>Plazos perdidos por revisiones imprevistas</h3><p>Cuando el documento vuelve con errores, los plazos administrativos y judiciales no esperan. El coste real va mucho más allá de la traducción.</p></article>
+    </div>
+    <div style="text-align:center"><a href="#contacto" class="btn-g">Evitar estos riesgos — consulta gratuita →</a></div>
+  </div>
+</section>
+
+<!-- ════════ SOLUCIÓN / SOBRE MÍ ════════ -->
+<section id="sobre-mi" class="sec sec-warm" aria-label="Sobre Jonathan Rodrigo Vega">
+  <div class="inner sol-grid">
+    <aside>
+      <div class="prof-av" aria-hidden="true">JV</div>
+      <p class="prof-name">Jonathan Rodrigo Vega</p>
+      <p class="prof-title">Traductor jurídico e institucional<br>Especialista FR/EN → ES</p>
+      <div role="list" aria-label="Formación académica">
+        <div class="cred fade" role="listitem"><span class="ci" aria-hidden="true">🎓</span><div class="ct"><strong>Máster en Traducción Institucional</strong><span>Universidad de Alicante</span></div></div>
+        <div class="cred fade" role="listitem"><span class="ci" aria-hidden="true">📘</span><div class="ct"><strong>Grado en Traducción e Interpretación</strong><span>Universidad Autónoma de Madrid</span></div></div>
+        <div class="cred fade" role="listitem"><span class="ci" aria-hidden="true">⚖️</span><div class="ct"><strong>Especialización jurídica e institucional</strong><span>Derecho, EUIPO, organismos públicos</span></div></div>
+      </div>
+    </aside>
+    <div>
+      <span class="ey">Por qué elegirme</span>
+      <h2 class="sec-title">La diferencia entre un traductor y un especialista jurídico</h2>
+      <p class="sec-lead">No todos los traductores conocen la diferencia entre una cláusula resolutoria y una resolutiva. Yo sí, y eso cambia el documento.</p>
+      <div role="list">
+        <div class="sp fade" role="listitem"><span class="spn" aria-hidden="true">01</span><div><h4>Formación específica en derecho e instituciones</h4><p>Mi Máster en Traducción Institucional por la UA es una especialización en documentación jurídica, textos legislativos y terminología de organismos europeos e internacionales. Exactamente lo que tus documentos necesitan.</p></div></div>
+        <div class="sp fade" role="listitem"><span class="spn" aria-hidden="true">02</span><div><h4>Trabajo directo, sin intermediarios</h4><p>Cuando me contratas, soy yo quien traduce tu documento de principio a fin. No lo externalizo. No uso traductores automáticos sin revisión. Tienes acceso directo al profesional responsable de cada palabra.</p></div></div>
+        <div class="sp fade" role="listitem"><span class="spn" aria-hidden="true">03</span><div><h4>Plazos que se cumplen y presupuesto cerrado</h4><p>Antes de empezar recibes un presupuesto exacto y una fecha de entrega comprometida. Sin sorpresas económicas, sin excusas de último momento.</p></div></div>
+        <div class="sp fade" role="listitem"><span class="spn" aria-hidden="true">04</span><div><h4>Garantía de revisión gratuita</h4><p>Si el documento contiene cualquier error terminológico o incoherencia jurídica detectable, lo corrijo sin coste adicional en un máximo de 24 horas.</p></div></div>
+      </div>
+      <div style="margin-top:2.25rem"><a href="#contacto" class="btn-p">Consultar disponibilidad →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SERVICIOS ════════ -->
+<section id="servicios" class="sec sec-white" aria-label="Servicios de traducción jurídica">
+  <div class="inner">
+    <span class="ey">Especialidades</span>
+    <h2 class="sec-title">Servicios de traducción</h2>
+    <p class="sec-lead">Cada encargo jurídico tiene sus particularidades. Estos son los ámbitos donde trabajo con mayor profundidad terminológica.</p>
+    <div class="svc-grid" role="list">
+      <article class="svc fade" role="listitem"><span class="stag">Propiedad industrial</span><h3>Documentación EUIPO y marcas</h3><p>Solicitudes de marcas, diseños y patentes ante la Oficina de Propiedad Intelectual de la UE. Terminología comunitaria precisa para que tu expediente no sufra objeciones por errores de forma.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+      <article class="svc fade" role="listitem"><span class="stag">Derecho privado</span><h3>Contratos y documentación societaria</h3><p>Contratos de compraventa, arrendamiento, prestación de servicios, acuerdos de confidencialidad, estatutos y actas societarias. Traducción que respeta la estructura jurídica del original.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+      <article class="svc fade" role="listitem"><span class="stag">Notarial y registral</span><h3>Poderes notariales y escrituras</h3><p>Poderes generales y especiales, escrituras de compraventa, testamentos y actas notariales para presentación ante notarías, registros y administraciones públicas españolas y extranjeras.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+      <article class="svc fade" role="listitem"><span class="stag">Institucional / UE</span><h3>Textos institucionales y legislativos</h3><p>Reglamentos, directivas, informes de organismos europeos e internacionales, comunicaciones oficiales y licitaciones públicas. Especialidad directa de mi formación de posgrado.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+      <article class="svc fade" role="listitem"><span class="stag">Migración y extranjería</span><h3>Documentos para visados y residencias</h3><p>Actas de nacimiento, certificados de antecedentes, documentación de estado civil y demás documentos requeridos por los procesos migratorios.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+      <article class="svc fade" role="listitem"><span class="stag">Litigación</span><h3>Documentación procesal y arbitral</h3><p>Demandas, sentencias, laudos arbitrales y documentos procesales para uso en procedimientos judiciales internacionales o reconocimiento de resoluciones extranjeras.</p><div class="slangs"><span class="sl">FR → ES</span><span class="sl">EN → ES</span></div></article>
+    </div>
+    <div class="svc-cta"><p>¿Tienes un documento que no encaja exactamente en estas categorías? Consúltame igualmente.</p><a href="#contacto" class="btn-p">Solicitar presupuesto personalizado →</a></div>
+  </div>
+</section>
+
+<!-- ════════ RECURSOS ════════ -->
+<section id="recursos" class="sec sec-warm" aria-label="Recursos gratuitos para traductores y clientes">
+  <div class="inner rec-grid">
+    <div>
+      <span class="ey">Recursos gratuitos</span>
+      <h2 class="sec-title">Más allá de la traducción</h2>
+      <p class="sec-lead">Comparto recursos útiles para traductores en formación y para clientes que quieran entender mejor sus documentos.</p>
+      <div class="vi fade"><div class="vi-ic" aria-hidden="true">📖</div><div><h4>Glosarios jurídicos descargables</h4><p>Terminología bilingüe FR/EN–ES para propiedad industrial, derecho societario, documentación notarial y textos institucionales UE. Actualizados periódicamente.</p></div></div>
+      <div class="vi fade"><div class="vi-ic" aria-hidden="true">✍️</div><div><h4>Blog profesional de traducción jurídica</h4><p>Artículos sobre terminología, errores frecuentes en la traducción de documentos legales y novedades en la EUIPO.</p></div></div>
+      <div class="vi fade"><div class="vi-ic" aria-hidden="true">📋</div><div><h4>Guías para clientes</h4><p>Cómo preparar tu documentación para una traducción eficiente y cómo reducir los plazos de entrega.</p></div></div>
+    </div>
+    <div class="glos fade" aria-label="Muestra de glosario jurídico">
+      <div class="glos-hd"><strong>Glosario — Propiedad industrial (muestra)</strong><span>FR / EN → ES</span></div>
+      <div class="grow"><span class="t">marque communautaire</span><span class="d">marca comunitaria</span></div>
+      <div class="grow"><span class="t">dépôt de marque</span><span class="d">solicitud de registro de marca</span></div>
+      <div class="grow"><span class="t">trademark opposition</span><span class="d">oposición a marca</span></div>
+      <div class="grow"><span class="t">intellectual property</span><span class="d">propiedad intelectual / industrial</span></div>
+      <div class="grow"><span class="t">contrefaçon</span><span class="d">infracción / falsificación</span></div>
+      <div class="grow"><span class="t">licence exclusive</span><span class="d">licencia exclusiva</span></div>
+      <a href="#" class="btn-lk" style="margin-top:1.2rem">Descargar glosario completo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ AUTORIDAD ════════ -->
+<section id="credibilidad" class="sec sec-white" aria-label="Formación y trayectoria profesional">
+  <div class="inner aut-grid">
+    <div>
+      <span class="ey">Formación y trayectoria</span>
+      <h2 class="sec-title">Una especialización que no se improvisa</h2>
+      <div class="tl" role="list" aria-label="Historial académico">
+        <div class="tl-it fade" role="listitem"><div class="tl-dot" aria-hidden="true"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Formación superior</span><span class="tl-ti">Grado en Traducción e Interpretación — Universidad Autónoma de Madrid</span><p class="tl-su">Formación integral en lingüística aplicada, traducción especializada e interpretación. Combinación lingüística francés e inglés al español como base de la práctica profesional.</p></div></div>
+        <div class="tl-it fade" role="listitem"><div class="tl-dot" aria-hidden="true"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Especialización</span><span class="tl-ti">Máster en Traducción Institucional — Universidad de Alicante</span><p class="tl-su">Posgrado oficial centrado en la documentación de organismos internacionales, instituciones públicas y textos jurídico-administrativos. Dominio de la terminología de la UE, la ONU y el Consejo de Europa.</p></div></div>
+        <div class="tl-it fade" role="listitem"><div class="tl-dot" aria-hidden="true"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Práctica profesional</span><span class="tl-ti">Propiedad industrial, derecho privado y documentación institucional</span><p class="tl-su">Traducción de expedientes EUIPO, contratos internacionales, poderes notariales y documentación para administraciones públicas en España y el extranjero.</p></div></div>
+      </div>
+    </div>
+    <aside>
+      <div class="stat"><div class="stat-n">FR / EN</div><p class="stat-l">Combinaciones lingüísticas activas: francés e inglés al español</p></div>
+      <div class="stat"><div class="stat-n">24–72h</div><p class="stat-l">Plazo de entrega habitual según volumen y tipo de documento</p></div>
+      <div role="list" aria-label="Garantías del servicio">
+        <div class="tbg fade" role="listitem"><span aria-hidden="true">🔒</span>Confidencialidad garantizada contractualmente</div>
+        <div class="tbg fade" role="listitem"><span aria-hidden="true">✅</span>Revisión terminológica incluida en cada encargo</div>
+        <div class="tbg fade" role="listitem"><span aria-hidden="true">📬</span>Presupuesto sin compromiso en menos de 24 horas</div>
+        <div class="tbg fade" role="listitem"><span aria-hidden="true">👤</span>Atención directa — sin intermediarios ni subcontratación</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ════════ SECCIÓN FRANCÉS ════════ -->
+<section id="fr" class="sec sec-navy" lang="fr" aria-label="Section en français — À propos">
+  <div class="inner fr-grid">
+    <div class="fr-txt">
+      <span class="ey ey-lt">Pour les clients francophones</span>
+      <h2 class="sec-title" style="color:#fff">Traducteur juridique spécialisé,<br>à votre service en français</h2>
+      <p>Je suis Jonathan Rodrigo Vega, traducteur juridique et institutionnel spécialisé dans la combinaison français–espagnol. Je traduis vos documents juridiques, notariaux et institutionnels vers un espagnol précis, adapté aux exigences des administrations espagnoles et des organismes européens.</p>
+      <p>Titulaire d'un Master en Traduction Institutionnelle de l'Université d'Alicante et d'une Licence en Traduction et Interprétation de l'Université Autonome de Madrid, je dispose d'une formation spécialisée dans la terminologie juridique et administrative française et européenne.</p>
+      <p>Que vous soyez un cabinet d'avocats, une entreprise française en expansion en Espagne, ou un particulier ayant besoin de traduire des documents officiels, je vous garantis précision, confidentialité et respect des délais.</p>
+      <div class="fr-cl" role="list">
+        <div class="fr-c" role="listitem">Master en Traduction Institutionnelle — Université d'Alicante (Espagne)</div>
+        <div class="fr-c" role="listitem">Licence en Traduction et Interprétation — Université Autonome de Madrid</div>
+        <div class="fr-c" role="listitem">Spécialisation : droit des sociétés, propriété industrielle (EUIPO), documents notariaux, textes institutionnels UE</div>
+        <div class="fr-c" role="listitem">Délai de livraison : 24 à 72 heures · Devis gratuit et sans engagement</div>
+        <div class="fr-c" role="listitem">Garantie de révision terminologique incluse dans chaque commande</div>
+      </div>
+    </div>
+    <div class="fr-card">
+      <h3>Demander un devis en français</h3>
+      <p>Envoyez-moi votre document ou décrivez votre besoin. Je vous répondrai sous 24 heures avec un devis détaillé, un délai de livraison précis et toutes les informations nécessaires.</p>
+      <p>Vos données et documents sont traités avec une confidentialité totale, conformément au RGPD.</p>
+      <a href="#contacto" class="btn-p" style="margin-top:1.5rem;width:100%;justify-content:center">Demander un devis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIOS ════════ -->
+<section id="testimonios" class="sec sec-warm" aria-label="Testimonios de clientes">
+  <div class="inner">
+    <span class="ey">Prueba social</span>
+    <h2 class="sec-title">Lo que dicen quienes han trabajado conmigo</h2>
+    <div class="tg" role="list">
+      <article class="tc fade" role="listitem">
+        <blockquote class="tq">Jonathan tradujo el expediente de registro de nuestra marca ante la EUIPO con una precisión terminológica que evitó cualquier objeción. El proceso fue limpio y el plazo, cumplido al día.</blockquote>
+        <footer class="ta"><div class="tav" aria-hidden="true">MB</div><div><span class="tn">María B.</span><span class="tr">Directora de Expansión · Empresa de diseño industrial, Madrid</span></div></footer>
+      </article>
+      <article class="tc fade" role="listitem">
+        <blockquote class="tq">Necesitaba traducir contratos de distribución del francés al español con urgencia. Entrega perfecta en 36 horas, con glosario adjunto para coherencia terminológica futura. Muy recomendable.</blockquote>
+        <footer class="ta"><div class="tav" aria-hidden="true">PL</div><div><span class="tn">Pierre L.</span><span class="tr">Responsable jurídico · Empresa francesa con filial en España</span></div></footer>
+      </article>
+      <div class="tp fade"><p>¿Has trabajado conmigo?<br>Me encantaría incluir tu valoración aquí.</p><a href="#contacto" class="btn-lk">Enviar testimonio →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FORMULARIO ════════ -->
+<section id="contacto" class="sec sec-white" aria-label="Formulario de solicitud de presupuesto">
+  <div class="inner fl">
+    <div>
+      <span class="ey">Solicitar presupuesto</span>
+      <h2 class="sec-title">Cuéntame qué necesitas</h2>
+      <p class="sec-lead">Respondo en menos de 24 horas con un presupuesto exacto y una fecha de entrega comprometida. Sin letra pequeña.</p>
+      <div class="ft-items" role="list">
+        <div class="ft-item fade" role="listitem"><div class="ft-ic" aria-hidden="true">🔒</div><div><h5>Confidencialidad garantizada</h5><p>Tus documentos se tratan con estricta confidencialidad conforme al RGPD. Nunca los comparto ni los uso para ningún fin ajeno al encargo.</p></div></div>
+        <div class="ft-item fade" role="listitem"><div class="ft-ic" aria-hidden="true">✅</div><div><h5>Revisión exhaustiva incluida</h5><p>Cada traducción incluye revisión terminológica y de coherencia jurídica. Si detectas cualquier error, lo corrijo gratis en 24 horas.</p></div></div>
+        <div class="ft-item fade" role="listitem"><div class="ft-ic" aria-hidden="true">📬</div><div><h5>Presupuesto sin compromiso</h5><p>Solo empezamos cuando ambas partes estamos de acuerdo en precio y plazo.</p></div></div>
+        <div class="ft-item fade" role="listitem"><div class="ft-ic" aria-hidden="true">⏰</div><div><h5>Respuesta en menos de 24 horas</h5><p>Respondo a todos los presupuestos en menos de un día hábil, incluso para proyectos urgentes.</p></div></div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO: sustituye TU_ID_FORMSPREE por tu ID real de formspree.io -->
+    <div class="fw">
+      <form id="jvForm" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" enctype="multipart/form-data" novalidate aria-label="Formulario de presupuesto">
+        <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto — jonathanrodrigovega.es">
+        <input type="hidden" name="_language" value="es">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="fg">
+          <div class="fgp"><label for="f-nombre">Nombre completo *</label><input type="text" id="f-nombre" name="nombre" placeholder="Ej. María García" required></div>
+          <div class="fgp"><label for="f-empresa">Empresa u organismo</label><input type="text" id="f-empresa" name="empresa" placeholder="Opcional"></div>
+          <div class="fgp"><label for="f-email">Correo electrónico *</label><input type="email" id="f-email" name="email" placeholder="tu@email.com" required></div>
+          <div class="fgp"><label for="f-tel">Teléfono</label><input type="tel" id="f-tel" name="telefono" placeholder="+34 600 000 000"></div>
+          <div class="fgp full"><label for="f-tipo">Tipo de documento *</label>
+            <select id="f-tipo" name="tipo_documento" required>
+              <option value="">Selecciona el tipo de documento</option>
+              <option>Contrato / acuerdo comercial</option>
+              <option>Documentación EUIPO / marcas</option>
+              <option>Poder notarial / escritura</option>
+              <option>Texto institucional o legislativo</option>
+              <option>Documentación migratoria / extranjería</option>
+              <option>Documentación procesal / judicial</option>
+              <option>Otro (especificar en el mensaje)</option>
+            </select>
+          </div>
+          <div class="fgp"><label for="f-or">Idioma de origen *</label>
+            <select id="f-or" name="idioma_origen" required>
+              <option value="">Selecciona</option>
+              <option value="fr">Francés</option>
+              <option value="en">Inglés</option>
+            </select>
+          </div>
+          <div class="fgp"><label for="f-dst">Idioma de destino</label>
+            <select id="f-dst" name="idioma_destino"><option value="es" selected>Español</option></select>
+          </div>
+          <div class="fgp full"><label for="f-plazo">¿Tienes fecha límite?</label><input type="date" id="f-plazo" name="fecha_limite"></div>
+          <div class="fgp full">
+            <label>Adjuntar documento (opcional)</label>
+            <div class="fup" onclick="document.getElementById('f-file').click()" tabindex="0" role="button" aria-label="Seleccionar archivo">
+              <strong id="fn">Seleccionar archivo</strong>
+              <span id="fs">PDF, DOCX, DOC — Máx. 10 MB</span>
+              <input type="file" id="f-file" name="archivo" accept=".pdf,.doc,.docx" style="display:none" aria-label="Subir documento">
+            </div>
+          </div>
+          <div class="fgp full"><label for="f-msg">Información adicional</label><textarea id="f-msg" name="mensaje" placeholder="Describe brevemente el documento, el uso que le darás, o cualquier requisito especial..."></textarea></div>
+          <div class="fgp full">
+            <div class="fchk">
+              <input type="checkbox" id="f-priv" name="privacidad" required>
+              <label for="f-priv" style="font-weight:400">He leído y acepto la <a href="/politica-privacidad.html">Política de privacidad</a>. Mis datos serán usados exclusivamente para gestionar este presupuesto.</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="fsub" id="fBtn">Enviar solicitud de presupuesto →</button>
+        <p class="fnote" id="fNote">Respondo en menos de 24 horas · Sin compromiso · Confidencialidad garantizada</p>
+        <div class="form-success" id="formSuccess" role="alert">✓ Solicitud enviada correctamente. Te respondo en menos de 24 horas.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer role="contentinfo">
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a href="#inicio" class="ft-logo">Jonathan <span>Vega</span></a>
+      <p>Traductor jurídico e institucional especializado en francés e inglés al español. Máster en Traducción Institucional por la Universidad de Alicante.</p>
+      <div class="ft-lngs" aria-label="Selector de idioma">
+        <a href="#" lang="es">ES</a>
+        <a href="#fr" lang="fr">FR</a>
+        <a href="#" lang="en">EN</a>
+      </div>
+    </div>
+    <div class="ft-col"><h5>Servicios</h5><ul role="list"><li><a href="#servicios">Traducción EUIPO</a></li><li><a href="#servicios">Contratos internacionales</a></li><li><a href="#servicios">Poderes notariales</a></li><li><a href="#servicios">Textos institucionales</a></li><li><a href="#servicios">Documentación migratoria</a></li></ul></div>
+    <div class="ft-col"><h5>Recursos</h5><ul role="list"><li><a href="#recursos">Glosarios descargables</a></li><li><a href="#recursos">Blog profesional</a></li><li><a href="#recursos">Guías para clientes</a></li></ul></div>
+    <div class="ft-col"><h5>Legal y contacto</h5><ul role="list">
+      <li><a href="/aviso-legal.html">Aviso legal</a></li>
+      <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
+      <li><a href="/politica-cookies.html">Política de cookies</a></li>
+      <li><a href="mailto:contacto@jonathanrodrigovega.es">contacto@jonathanrodrigovega.es</a></li>
+      <li><a href="https://linkedin.com/in/jonathanrodrigovega" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    </ul></div>
+  </div>
+  <div class="ft-bot">
+    <p>© 2025 Jonathan Rodrigo Vega · Todos los derechos reservados</p>
+    <div class="ft-bot-cta"><a href="#contacto">Solicitar presupuesto →</a></div>
+  </div>
+</footer>
+
+<!-- ════════ SCRIPTS ════════ -->
+<script>
+// Animaciones scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+// Fecha mínima en el campo de fecha
+const dp = document.getElementById('f-plazo');
+if (dp) dp.min = new Date().toISOString().split('T')[0];
+
+// Mostrar nombre del archivo seleccionado
+document.getElementById('f-file').addEventListener('change', function() {
+  if (this.files && this.files[0]) {
+    document.getElementById('fn').textContent = this.files[0].name;
+    document.getElementById('fs').textContent = (this.files[0].size / 1024 / 1024).toFixed(2) + ' MB';
+  }
+});
+
+// Envío del formulario con Formspree (fetch async para feedback inmediato)
+document.getElementById('jvForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('fBtn');
+  const note = document.getElementById('fNote');
+  const success = document.getElementById('formSuccess');
+
+  // Validación básica
+  const nombre = document.getElementById('f-nombre').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const tipo = document.getElementById('f-tipo').value;
+  const origen = document.getElementById('f-or').value;
+  const privacidad = document.getElementById('f-priv').checked;
+
+  if (!nombre || !email || !tipo || !origen || !privacidad) {
+    note.textContent = 'Por favor completa todos los campos obligatorios (*) y acepta la política de privacidad.';
+    note.style.color = '#C0392B';
+    return;
+  }
+
+  btn.textContent = 'Enviando…';
+  btn.disabled = true;
+
+  try {
+    const formData = new FormData(this);
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.style.display = 'none';
+      note.style.display = 'none';
+      success.style.display = 'block';
+      this.reset();
+      document.getElementById('fn').textContent = 'Seleccionar archivo';
+      document.getElementById('fs').textContent = 'PDF, DOCX, DOC — Máx. 10 MB';
+    } else {
+      throw new Error('Error en el servidor');
+    }
+  } catch(err) {
+    btn.textContent = 'Enviar solicitud de presupuesto →';
+    btn.disabled = false;
+    note.textContent = 'Hubo un problema al enviar. Escríbeme directamente a contacto@jonathanrodrigovega.es';
+    note.style.color = '#C0392B';
+  }
+});
+
+// Smooth scroll en todos los enlaces internos
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
