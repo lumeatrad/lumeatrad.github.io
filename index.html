@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jonathan Rodrigo Vega — Traductor jurídico e institucional. FR/EN → ES. Máster en Traducción Institucional, Universidad de Alicante.">
+<title>Jonathan Rodrigo Vega · Traductor Jurídico FR/EN → ES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1A2F4E;--navy-mid:#2D4A72;--navy-pale:#E8EEF5;
+  --gold:#B8923A;--gold-lt:#D4A94E;--gold-pale:#F5EDDA;
+  --paper:#FAF9F6;--paper-warm:#F3F1EA;--paper-bd:#E8E5DC;
+  --ink:#1A1A18;--ink-mid:#3D3D3A;--ink-lt:#6B6B66;
+  --success:#2D6A4F;--success-bg:#E8F5EE;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Inter',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--paper);color:var(--ink-mid);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* UTILIDADES */
+.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem}
+.eyebrow-lt{color:#D4A94E}
+.sec-h{font-family:var(--fd);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:.9rem}
+.sec-p{font-size:1rem;color:var(--ink-mid);line-height:1.78;max-width:580px;margin-bottom:1.75rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 5%}
+.sec{padding:4.5rem 0}
+
+/* BOTONES */
+.btn-gold{display:inline-flex;align-items:center;gap:.45rem;background:var(--gold);color:#fff !important;font-weight:700;font-size:.92rem;padding:13px 26px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s;font-family:var(--fb)}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:.45rem;background:transparent;color:var(--ink);font-weight:500;font-size:.92rem;padding:12px 24px;border-radius:8px;border:1.5px solid var(--paper-bd);text-decoration:none;transition:border-color .2s,background .2s;font-family:var(--fb)}
+.btn-outline:hover{border-color:var(--ink);background:var(--paper-warm)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.45rem;background:transparent;color:#fff;font-weight:500;font-size:.9rem;padding:11px 24px;border-radius:8px;border:1.5px solid rgba(255,255,255,.3);text-decoration:none;transition:border-color .2s;font-family:var(--fb)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7)}
+
+/* ═══ NAV ═══ */
+nav{position:sticky;top:0;z-index:200;background:rgba(250,249,246,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--paper-bd)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px;max-width:1100px;margin:0 auto;padding:0 5%;gap:1rem}
+.nav-logo{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap;flex-shrink:0}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:nowrap}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--ink-mid);text-decoration:none;white-space:nowrap;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.lang-btns{display:flex;gap:3px}
+.lang-btns a{font-size:.68rem;font-weight:700;padding:3px 7px;border:1px solid var(--paper-bd);border-radius:4px;color:var(--ink-lt);text-decoration:none;transition:all .2s}
+.lang-btns a.on,.lang-btns a:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.nav-cta{font-size:.82rem;font-weight:700;background:var(--ink);color:#fff !important;padding:8px 16px;border-radius:7px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--navy)}
+/* Hamburger mobile */
+.ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+.mobile-menu{display:none;position:fixed;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--paper-bd);padding:1rem 5%;z-index:199;flex-direction:column;gap:.25rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:.95rem;font-weight:500;color:var(--ink-mid);text-decoration:none;padding:.65rem 0;border-bottom:1px solid var(--paper-bd)}
+.mobile-menu a:last-child{border-bottom:none}
+
+/* ═══ HERO ═══ */
+/* Hero limpio: fondo claro, tarjeta al lado en desktop, apilada abajo en mobile */
+.hero{background:var(--paper);padding:4.5rem 0 4rem}
+.hero-in{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;max-width:1100px;margin:0 auto;padding:0 5%}
+.hero-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.9rem}
+.hero-h1{font-family:var(--fd);font-size:clamp(2.1rem,4vw,3.2rem);font-weight:700;line-height:1.18;color:var(--ink);margin-bottom:1.2rem}
+.hero-h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:1.02rem;color:var(--ink-mid);line-height:1.72;margin-bottom:2rem;max-width:500px}
+.hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--ink-lt)}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* Tarjeta perfil: panel azul marino, texto blanco legible */
+.profile-card{background:var(--navy);border-radius:16px;padding:2rem 1.75rem;color:#fff;width:310px;flex-shrink:0}
+.pc-avatar{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:1.1rem}
+.pc-name{font-family:var(--fd);font-size:1.12rem;color:#fff;margin-bottom:.2rem;line-height:1.3}
+.pc-title{font-size:.78rem;color:rgba(255,255,255,.65);margin-bottom:1.3rem}
+.pc-badge{display:flex;align-items:flex-start;gap:.6rem;background:rgba(255,255,255,.1);border-radius:8px;padding:.6rem .85rem;font-size:.76rem;color:#fff;margin-bottom:.5rem;line-height:1.4}
+.pc-badge-icon{flex-shrink:0;font-size:.95rem;margin-top:.05rem}
+.pc-langs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1.1rem}
+.pc-lang{font-size:.68rem;font-weight:600;padding:4px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85)}
+
+/* ═══ SECCIONES COMUNES ═══ */
+.bg-navy{background:var(--navy)}
+.bg-warm{background:var(--paper-warm)}
+.bg-white{background:var(--paper)}
+
+/* ═══ PROBLEMA ═══ */
+.risks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:2.5rem}
+.risk-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:1.4rem;transition:background .2s,transform .2s}
+.risk-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.risk-icon{font-size:1.4rem;margin-bottom:.65rem;display:block}
+.risk-card h3{font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.38rem;font-family:var(--fb)}
+.risk-card p{font-size:.82rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0}
+
+/* ═══ SOBRE MÍ ═══ */
+.sobre-grid{display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:start}
+.sobre-photo{width:100%;aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:4rem;font-weight:700;color:var(--gold);margin-bottom:1.25rem}
+.sobre-cred{display:flex;gap:.7rem;background:#fff;border-radius:8px;padding:.85rem 1rem;border:1px solid var(--paper-bd);margin-bottom:.6rem;transition:box-shadow .2s}
+.sobre-cred:hover{box-shadow:0 2px 12px rgba(26,26,24,.08)}
+.sc-icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
+.sc-text strong{display:block;font-size:.82rem;font-weight:600;color:var(--ink)}
+.sc-text span{font-size:.76rem;color:var(--ink-lt)}
+.sp-item{display:flex;gap:1.1rem;margin-bottom:1.75rem}
+.sp-num{font-family:var(--fd);font-size:1.8rem;font-weight:700;color:var(--paper-bd);line-height:1;flex-shrink:0;width:2.25rem;margin-top:2px}
+.sp-item h4{font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;font-family:var(--fb)}
+.sp-item p{font-size:.86rem;color:var(--ink-mid);line-height:1.65;margin:0}
+
+/* ═══ SERVICIOS ═══ */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin-bottom:2.25rem}
+.svc-card{background:#fff;border:1px solid var(--paper-bd);border-radius:14px;padding:1.6rem;position:relative;overflow:hidden;transition:box-shadow .25s,transform .2s}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .25s}
+.svc-card:hover{box-shadow:0 6px 24px rgba(26,26,24,.12);transform:translateY(-4px)}
+.svc-card:hover::before{opacity:1}
+.svc-tag{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:.85rem}
+.svc-card h3{font-size:.98rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;font-family:var(--fb)}
+.svc-card p{font-size:.84rem;color:var(--ink-mid);line-height:1.62;margin-bottom:1.1rem}
+.svc-langs{display:flex;gap:.35rem}
+.lang-pill{font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--navy-pale);color:var(--navy-mid)}
+.svc-cta-box{text-align:center;background:var(--gold-pale);border-radius:14px;padding:2.25rem}
+.svc-cta-box p{font-size:1rem;color:var(--ink);margin-bottom:1.1rem}
+
+/* ═══ TARIFAS ═══ */
+.tarifas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.tarifa-card{background:#fff;border:1.5px solid var(--paper-bd);border-radius:14px;padding:1.75rem;transition:box-shadow .2s}
+.tarifa-card.featured{border-color:var(--gold);position:relative}
+.tarifa-card.featured::before{content:'Más solicitado';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 12px;border-radius:20px;white-space:nowrap}
+.tarifa-card:hover{box-shadow:0 4px 20px rgba(26,26,24,.1)}
+.tarifa-tipo{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}
+.tarifa-card h3{font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.5rem}
+.tarifa-precio{font-family:var(--fd);font-size:2rem;font-weight:700;color:var(--ink);line-height:1;margin-bottom:.25rem}
+.tarifa-precio span{font-size:.9rem;font-weight:400;color:var(--ink-lt)}
+.tarifa-nota{font-size:.78rem;color:var(--ink-lt);margin-bottom:1.25rem}
+.tarifa-features{list-style:none;margin-bottom:1.5rem}
+.tarifa-features li{font-size:.85rem;color:var(--ink-mid);padding:.38rem 0;border-bottom:1px solid var(--paper-warm);display:flex;align-items:flex-start;gap:.5rem;line-height:1.5}
+.tarifa-features li:last-child{border-bottom:none}
+.tarifa-features li::before{content:'✓';color:var(--success);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.tarifa-aviso{background:var(--gold-pale);border-radius:10px;padding:1.25rem 1.5rem;margin-top:2rem}
+.tarifa-aviso p{font-size:.88rem;color:var(--ink-mid);line-height:1.65;margin:0}
+.tarifa-aviso strong{color:var(--ink)}
+
+/* ═══ RECURSOS ═══ */
+.recursos-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.rec-item{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.35rem}
+.rec-icon{width:38px;height:38px;border-radius:8px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.rec-item h4{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.18rem}
+.rec-item p{font-size:.83rem;color:var(--ink-mid);line-height:1.58;margin:0}
+.glos-preview{background:#fff;border:1px solid var(--paper-bd);border-radius:14px;padding:1.4rem}
+.glos-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.4rem}
+.glos-hd strong{font-size:.85rem;color:var(--ink)}
+.glos-hd span{font-size:.76rem;color:var(--ink-lt)}
+.glos-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;padding:.55rem 0;border-bottom:1px solid var(--paper-warm);font-size:.79rem}
+.glos-row:last-of-type{border-bottom:none}
+.glos-row .t{font-weight:600;color:var(--ink)}
+.glos-row .d{color:var(--ink-mid)}
+.btn-link{font-size:.86rem;font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-pale);padding-bottom:1px;display:inline-block;margin-top:1rem;transition:border-color .2s}
+.btn-link:hover{border-color:var(--gold)}
+
+/* ═══ ARTÍCULOS ═══ */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.art-card{background:#fff;border:1px solid var(--paper-bd);border-radius:14px;overflow:hidden;transition:box-shadow .25s,transform .2s;text-decoration:none;display:block}
+.art-card:hover{box-shadow:0 6px 24px rgba(26,26,24,.1);transform:translateY(-3px)}
+.art-img{height:140px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.art-img.v2{background:var(--navy-mid)}
+.art-img.v3{background:#1e3a5f}
+.art-body{padding:1.35rem}
+.art-cat{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem}
+.art-body h3{font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;line-height:1.4}
+.art-body p{font-size:.82rem;color:var(--ink-mid);line-height:1.6;margin-bottom:.75rem}
+.art-meta{font-size:.74rem;color:var(--ink-lt)}
+.art-cta{text-align:center;margin-top:2.5rem}
+
+/* ═══ AUTORIDAD ═══ */
+.aut-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3.5rem;align-items:start}
+.tl{position:relative}
+.tl::before{content:'';position:absolute;left:11px;top:8px;bottom:8px;width:1px;background:var(--paper-bd)}
+.tl-item{display:flex;gap:1.35rem;padding-bottom:2rem;position:relative}
+.tl-dot{width:23px;height:23px;border-radius:50%;background:var(--paper);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;margin-top:2px}
+.tl-dot-in{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.tl-yr{font-size:.68rem;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem;display:block}
+.tl-title{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.28rem;display:block}
+.tl-sub{font-size:.83rem;color:var(--ink-mid);line-height:1.62}
+.stat-box{background:var(--paper-warm);border-radius:14px;padding:1.35rem;margin-bottom:1.1rem}
+.stat-n{font-family:var(--fd);font-size:2.4rem;font-weight:700;color:var(--ink);line-height:1;margin-bottom:.2rem}
+.stat-l{font-size:.83rem;color:var(--ink-mid)}
+.trust-badge{display:flex;align-items:center;gap:.65rem;background:#fff;border:1px solid var(--paper-bd);border-radius:8px;padding:.68rem .95rem;font-size:.83rem;color:var(--ink-mid);margin-bottom:.55rem;transition:box-shadow .2s}
+.trust-badge:hover{box-shadow:0 2px 10px rgba(26,26,24,.07)}
+.trust-badge-icon{font-size:1rem;flex-shrink:0}
+
+/* ═══ SECCIÓN FRANCÉS ═══ */
+.fr-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3.5rem;align-items:center}
+.fr-txt p{color:rgba(255,255,255,.72);line-height:1.75;font-size:.92rem;margin-bottom:.9rem}
+.fr-cred{display:flex;align-items:flex-start;gap:.65rem;font-size:.83rem;color:rgba(255,255,255,.68);margin-bottom:.6rem;line-height:1.5}
+.fr-cred::before{content:'◆';color:#D4A94E;font-size:.58rem;margin-top:.32rem;flex-shrink:0}
+.fr-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.85rem}
+.fr-card h3{font-family:var(--fd);font-size:1.05rem;color:#fff;margin-bottom:.9rem}
+.fr-card p{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:.75rem}
+
+/* ═══ TESTIMONIOS ═══ */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.15rem}
+.testi-card{background:#fff;border:1px solid var(--paper-bd);border-radius:14px;padding:1.6rem;transition:box-shadow .2s}
+.testi-card:hover{box-shadow:0 4px 20px rgba(26,26,24,.1)}
+.testi-q{font-size:.9rem;color:var(--ink-mid);line-height:1.7;margin-bottom:1.1rem;font-style:italic;position:relative}
+.testi-q::before{content:'\201C';font-family:var(--fd);font-size:2.2rem;color:var(--gold);line-height:.5;display:block;margin-bottom:.65rem}
+.testi-author{display:flex;align-items:center;gap:.65rem}
+.testi-av{width:38px;height:38px;border-radius:50%;background:var(--navy-pale);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;color:var(--navy-mid);flex-shrink:0}
+.testi-name{font-size:.83rem;font-weight:600;color:var(--ink);display:block}
+.testi-role{font-size:.76rem;color:var(--ink-lt);display:block}
+.testi-pending{background:var(--paper-warm);border:1.5px dashed var(--paper-bd);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:170px}
+.testi-pending p{font-size:.85rem;color:#A8A89E;line-height:1.6;margin-bottom:.75rem}
+
+/* ═══ FORMULARIO ═══ */
+.form-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
+.form-trust-item{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:1.15rem}
+.fti-icon{width:34px;height:34px;background:var(--gold-pale);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.form-trust-item h5{font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:.12rem}
+.form-trust-item p{font-size:.78rem;color:var(--ink-mid);line-height:1.52;margin:0}
+.form-box{background:#fff;border:1px solid var(--paper-bd);border-radius:14px;padding:1.85rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.fg{display:flex;flex-direction:column;gap:.35rem}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:.76rem;font-weight:600;color:var(--ink)}
+.fg input,.fg select,.fg textarea{width:100%;padding:.65rem .88rem;font-family:var(--fb);font-size:.88rem;color:var(--ink);background:var(--paper-warm);border:1px solid var(--paper-bd);border-radius:7px;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(184,146,58,.1)}
+.fg textarea{resize:vertical;min-height:90px}
+.file-drop{border:1.5px dashed var(--paper-bd);border-radius:7px;padding:1.1rem;text-align:center;background:var(--paper-warm);cursor:pointer;transition:border-color .2s}
+.file-drop:hover{border-color:var(--gold)}
+.file-drop strong{font-size:.82rem;color:var(--gold);display:block;margin-bottom:3px}
+.file-drop span{font-size:.76rem;color:var(--ink-lt)}
+.form-check{display:flex;align-items:flex-start;gap:.5rem;font-size:.78rem;color:var(--ink-mid)}
+.form-check input{width:auto;margin-top:2px;flex-shrink:0;accent-color:var(--gold)}
+.form-check a{color:var(--gold)}
+.form-submit{width:100%;padding:13px;font-family:var(--fb);font-size:.95rem;font-weight:700;background:var(--gold);color:#fff;border:none;border-radius:8px;cursor:pointer;transition:background .2s;margin-top:.4rem}
+.form-submit:hover{background:var(--gold-lt)}
+.form-submit:disabled{opacity:.7;cursor:not-allowed}
+.form-note{font-size:.73rem;color:#A8A89E;text-align:center;margin-top:.65rem}
+.form-ok{display:none;background:var(--success-bg);border:1px solid var(--success);border-radius:8px;padding:1.1rem;text-align:center;font-size:.9rem;color:var(--success);margin-top:.75rem;font-weight:500}
+
+/* ═══ FOOTER ═══ */
+footer{background:var(--ink);color:rgba(255,255,255,.5)}
+.ft-top{padding:3.5rem 5% 2.25rem;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;max-width:1100px;margin:0 auto}
+.ft-logo{font-family:var(--fd);font-size:1.08rem;font-weight:700;color:#fff;text-decoration:none;display:block;margin-bottom:.65rem}
+.ft-logo span{color:var(--gold)}
+.ft-brand p{font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.44);margin-bottom:.85rem}
+.ft-langs{display:flex;gap:.4rem}
+.ft-langs a{font-size:.68rem;font-weight:700;padding:3px 7px;border:1px solid rgba(255,255,255,.15);border-radius:3px;color:rgba(255,255,255,.5);text-decoration:none;transition:all .2s}
+.ft-langs a:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.ft-col h5{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.27);margin-bottom:.85rem}
+.ft-col ul{list-style:none}
+.ft-col li{margin-bottom:.42rem}
+.ft-col a{font-size:.83rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.ft-col a:hover{color:#D4A94E}
+.ft-bot{border-top:1px solid rgba(255,255,255,.08);padding:1.4rem 5%;display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:.75rem}
+.ft-bot p{font-size:.73rem;color:rgba(255,255,255,.27)}
+.ft-cta a{font-size:.83rem;font-weight:600;background:var(--gold);color:#fff;padding:7px 18px;border-radius:7px;text-decoration:none;transition:background .2s}
+.ft-cta a:hover{background:var(--gold-lt)}
+
+
+
+/* Fotos perfil y artículos */
+.sobre-photo-img{width:100%;aspect-ratio:1;border-radius:16px;object-fit:cover;object-position:center top;display:block}
+.sobre-photo-placeholder{width:100%;aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:4rem;font-weight:700;color:var(--gold)}
+.art-img-photo{height:180px;overflow:hidden;background:var(--navy)}
+.art-img-photo img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.art-card:hover .art-img-photo img{transform:scale(1.04)}
+
+/* Glosarios descargables */
+.glos-dl-btn{display:flex;align-items:center;gap:.5rem;background:var(--paper-warm);border:1px solid var(--paper-bd);border-radius:7px;padding:.55rem .85rem;font-size:.8rem;font-weight:500;color:var(--ink);text-decoration:none;transition:background .2s,border-color .2s}
+.glos-dl-btn:hover{background:var(--gold-pale);border-color:var(--gold);color:var(--ink)}
+
+/* Sistema artículos completos */
+.art-full{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:500;overflow-y:auto}
+.art-full.open{display:block}
+.art-full-inner{max-width:720px;margin:0 auto;padding:3rem 5% 5rem}
+.art-full-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--ink-lt);text-decoration:none;margin-bottom:2rem;cursor:pointer;background:none;border:none;font-family:var(--fb)}
+.art-full-back:hover{color:var(--gold)}
+.art-full-cat{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.65rem}
+.art-full-h1{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:.75rem}
+.art-full-meta{font-size:.8rem;color:var(--ink-lt);margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--paper-bd)}
+.art-full-body{font-size:1rem;color:var(--ink-mid);line-height:1.8}
+.art-full-body h2{font-family:var(--fd);font-size:1.35rem;font-weight:700;color:var(--ink);margin:2rem 0 .75rem}
+.art-full-body h3{font-size:1.05rem;font-weight:600;color:var(--ink);margin:1.5rem 0 .5rem}
+.art-full-body p{margin-bottom:1rem}
+.art-full-body ul,.art-full-body ol{padding-left:1.4rem;margin-bottom:1rem}
+.art-full-body li{margin-bottom:.4rem}
+.art-full-body strong{color:var(--ink);font-weight:600}
+.art-full-body blockquote{border-left:3px solid var(--gold);padding-left:1.1rem;margin:1.25rem 0;color:var(--ink-lt);font-style:italic}
+
+/* STICKY CTA MOBILE */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--navy);padding:12px 20px calc(12px + env(safe-area-inset-bottom));z-index:300;border-top:1px solid rgba(255,255,255,.1)}
+.sticky-cta a{display:block;background:var(--gold);color:#fff;font-weight:700;font-size:1rem;padding:13px;border-radius:8px;text-align:center;text-decoration:none}
+
+/* ANIMACIONES */
+@media(prefers-reduced-motion:no-preference){
+  .fade{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+  .fade.on{opacity:1;transform:none}
+  .fade:nth-child(2){transition-delay:.08s}
+  .fade:nth-child(3){transition-delay:.16s}
+  .fade:nth-child(4){transition-delay:.24s}
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .ham{display:flex}
+  .ft-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr}
+  .profile-card{width:100%;max-width:400px}
+  .sobre-grid,.aut-grid,.recursos-grid,.fr-grid,.form-layout{grid-template-columns:1fr;gap:2.25rem}
+  .sobre-photo{width:120px;height:120px;font-size:2.5rem;margin-bottom:.75rem}
+  .sticky-cta{display:block}
+  body{padding-bottom:72px}
+}
+@media(max-width:600px){
+  .hero{padding:3rem 0}
+  .hero-h1{font-size:2rem}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{text-align:center;justify-content:center}
+  .svc-grid,.tarifas-grid,.articles-grid,.testi-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .fg.full{grid-column:1}
+  .ft-top{grid-template-columns:1fr}
+  .ft-bot{flex-direction:column;text-align:center}
+  .sec{padding:3.5rem 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav role="banner">
+  <div class="nav-in">
+    <a href="#inicio" class="nav-logo">Jonathan <span>Vega</span></a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#tarifas">Tarifas</a></li>
+      <li><a href="#articulos">Artículos</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+      <li><a href="#fr">FR</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-btns"><a href="#" class="on">ES</a><a href="#fr">FR</a><a href="#">EN</a></div>
+      <a href="#contacto" class="nav-cta">Solicitar presupuesto</a>
+      <button class="ham" onclick="toggleMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a>
+  <a href="#tarifas" onclick="closeMenu()">Tarifas</a>
+  <a href="#articulos" onclick="closeMenu()">Artículos</a>
+  <a href="#recursos" onclick="closeMenu()">Recursos</a>
+  <a href="#fr" onclick="closeMenu()">FR</a>
+  <a href="#contacto" onclick="closeMenu()" style="color:var(--gold);font-weight:700">Solicitar presupuesto →</a>
+</div>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-cta"><a href="#contacto">Solicitar presupuesto →</a></div>
+
+<!-- ═══ HERO ═══ -->
+<section id="inicio" class="hero">
+  <div class="hero-in">
+    <!-- Texto izquierda -->
+    <div>
+      <span class="hero-eyebrow">Traducción jurídica e institucional · FR / EN → ES</span>
+      <h1 class="hero-h1">Tus documentos legales,<br><em>sin margen de error</em></h1>
+      <p class="hero-sub">Traducciones jurídicas e institucionales con precisión terminológica garantizada. Entrega en 24–72 horas. Doble titulación universitaria especializada en derecho y organismos públicos.</p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn-gold">Solicitar presupuesto →</a>
+        <a href="#servicios" class="btn-outline">Ver servicios</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item"><span class="trust-dot"></span>Confidencialidad total</span>
+        <span class="trust-item"><span class="trust-dot"></span>Revisión incluida</span>
+        <span class="trust-item"><span class="trust-dot"></span>Plazo garantizado</span>
+      </div>
+    </div>
+    <!-- Tarjeta derecha — azul marino, texto blanco nítido -->
+    <div class="profile-card">
+      <div class="pc-avatar">JV</div>
+      <p class="pc-name">Jonathan Rodrigo Vega</p>
+      <p class="pc-title">Traductor Jurídico &amp; Institucional</p>
+      <div class="pc-badge"><span class="pc-badge-icon">🎓</span>Máster en Traducción Institucional · Univ. de Alicante</div>
+      <div class="pc-badge"><span class="pc-badge-icon">📜</span>Grado en Traducción e Interpretación · UAM</div>
+      <div class="pc-badge"><span class="pc-badge-icon">⚖️</span>Especialización en documentación civil, migratoria y jurídica</div>
+      <div class="pc-langs">
+        <span class="pc-lang">Francés → Español</span>
+        <span class="pc-lang">Inglés → Español</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEMA ═══ -->
+<section class="sec bg-navy">
+  <div class="wrap">
+    <span class="eyebrow eyebrow-lt">El riesgo real</span>
+    <h2 class="sec-h" style="color:#fff">Una mala traducción jurídica no es un error tipográfico</h2>
+    <p class="sec-p" style="color:rgba(255,255,255,.65)">En documentos legales, cada término tiene consecuencias jurídicas concretas. Estas son las situaciones que los traductores no especializados no pueden evitar.</p>
+    <div class="risks-grid">
+      <article class="risk-card fade"><span class="risk-icon">⛔</span><h3>Documentos rechazados en extranjería</h3><p>Un acta de nacimiento o matrimonio mal traducida puede paralizar un expediente de residencia o nacionalidad durante meses.</p></article>
+      <article class="risk-card fade"><span class="risk-icon">📑</span><h3>Documentos no admisibles</h3><p>Los errores terminológicos en contratos, poderes o escrituras pueden invalidar el documento completo ante las autoridades.</p></article>
+      <article class="risk-card fade"><span class="risk-icon">🌍</span><h3>Ambigüedades contractuales</h3><p>Un término ambiguo puede interpretarse de formas opuestas en distintos sistemas jurídicos, generando conflictos costosos.</p></article>
+      <article class="risk-card fade"><span class="risk-icon">⏱️</span><h3>Plazos perdidos</h3><p>Cuando el documento vuelve con errores, los plazos administrativos y judiciales no esperan. El coste es mucho mayor.</p></article>
+    </div>
+    <div style="text-align:center"><a href="#contacto" class="btn-ghost">Evitar estos riesgos — consulta gratuita →</a></div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section id="servicios" class="sec bg-white">
+  <div class="wrap">
+    <span class="eyebrow">Especialidades</span>
+    <h2 class="sec-h">Servicios de traducción</h2>
+    <p class="sec-p">Cada encargo jurídico tiene sus particularidades. Estos son los ámbitos donde trabajo con mayor profundidad terminológica.</p>
+    <div class="svc-grid">
+      <article class="svc-card fade"><span class="svc-tag">Estado civil</span><h3>Actas de nacimiento y matrimonio</h3><p>Traducción de actas civiles de cualquier país para su uso en España: trámites de extranjería, nacionalidad, registro civil y procedimientos judiciales. Senegal, Pakistán, Filipinas y muchos más.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+      <article class="svc-card fade"><span class="svc-tag">Derecho privado</span><h3>Contratos y documentación societaria</h3><p>Contratos de compraventa, arrendamiento, prestación de servicios, acuerdos de confidencialidad, estatutos y actas societarias.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+      <article class="svc-card fade"><span class="svc-tag">Notarial y registral</span><h3>Poderes notariales y escrituras</h3><p>Poderes generales y especiales, escrituras de compraventa, testamentos y actas notariales para presentación ante notarías y registros.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+      <article class="svc-card fade"><span class="svc-tag">Antecedentes penales</span><h3>Certificados de antecedentes penales</h3><p>Traducción de certificados de antecedentes penales y policiales de cualquier país para trámites de residencia, nacionalidad o reagrupación familiar en España.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+      <article class="svc-card fade"><span class="svc-tag">Migración y extranjería</span><h3>Documentos para visados y residencias</h3><p>Actas de nacimiento, certificados de antecedentes, documentación de estado civil y demás documentos para procesos migratorios.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+      <article class="svc-card fade"><span class="svc-tag">Litigación</span><h3>Documentación procesal y arbitral</h3><p>Demandas, sentencias, laudos arbitrales y documentos procesales para procedimientos judiciales internacionales.</p><div class="svc-langs"><span class="lang-pill">FR → ES</span><span class="lang-pill">EN → ES</span></div></article>
+    </div>
+    <div class="svc-cta-box"><p>¿Tu documento no encaja en estas categorías? Consúltame igualmente.</p><a href="#contacto" class="btn-gold">Solicitar presupuesto personalizado →</a></div>
+  </div>
+</section>
+
+<!-- ═══ SOBRE MÍ ═══ -->
+<section id="sobre-mi" class="sec bg-warm">
+  <div class="wrap">
+    <div class="sobre-grid">
+      <aside>
+        <!-- Foto + bio compacta -->
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+  <div style="width:80px;height:80px;border-radius:50%;overflow:hidden;border:2.5px solid var(--gold);flex-shrink:0">
+    <img src="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/foto-perfil.jpg" alt="Jonathan Rodrigo Vega" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+  </div>
+  <div>
+    <p style="font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:.2rem">Jonathan Rodrigo Vega</p>
+    <p style="font-size:.78rem;color:var(--ink-lt);line-height:1.55">Traductor jurídico e institucional<br>FR / EN → ES</p>
+  </div>
+</div>
+<p style="font-size:.88rem;color:var(--ink-mid);line-height:1.75;margin-bottom:1.5rem">Graduado en Traducción e Interpretación por la UAM y Máster en Traducción Institucional por la Universidad de Alicante. Realicé un año de estudios en la Université Rennes 2 (Francia) y mis prácticas profesionales en CBLingua, donde traduje documentación jurídica y civil de todo tipo. Me especializo en documentación para personas que necesitan que sus papeles funcionen en España: actas, antecedentes, matrimonios, visados.</p>
+        <div class="sobre-cred fade"><span class="sc-icon">🎓</span><div class="sc-text"><strong>Máster en Traducción Institucional</strong><span>Universidad de Alicante</span></div></div>
+        <div class="sobre-cred fade"><span class="sc-icon">📘</span><div class="sc-text"><strong>Grado en Traducción e Interpretación</strong><span>Universidad Autónoma de Madrid</span></div></div>
+        <div class="sobre-cred fade"><span class="sc-icon">🌍</span><div class="sc-text"><strong>Prácticas profesionales</strong><span>CBLingua — Traducción e interpretación</span></div></div><div class="sobre-cred fade"><span class="sc-icon">🇫🇷</span><div class="sc-text"><strong>Año de estudios en Francia</strong><span>Université Rennes 2</span></div></div>
+      </aside>
+      <div>
+        <span class="eyebrow">Sobre mí</span>
+        <h2 class="sec-h">La diferencia entre un traductor y un especialista jurídico</h2>
+        <p class="sec-p">Llevo años trabajando con documentos que afectan a personas reales: familias que quieren reagruparse, personas que buscan regularizar su situación, parejas cuyo matrimonio necesita reconocerse. Eso exige precisión, pero también entender el contexto humano detrás de cada papel.</p>
+        <div class="sp-item fade"><span class="sp-num">01</span><div><h4>Formación sólida y experiencia real</h4><p>Grado en Traducción e Interpretación por la UAM, Máster en Traducción Institucional por la Universidad de Alicante, y un año de estudios en la Université Rennes 2 (Francia). Además, prácticas profesionales en CBLingua, donde traduje todo tipo de documentación jurídica y civil.</p></div></div>
+        <div class="sp-item fade"><span class="sp-num">02</span><div><h4>Experiencia con documentos de todo el mundo</h4><p>He trabajado con documentación procedente de Senegal, Pakistán, Filipinas, Marruecos, Guinea y muchos otros países. Cada sistema registral es diferente y saber leer esas diferencias es fundamental para una traducción que funcione ante las autoridades españolas.</p></div></div>
+        <div class="sp-item fade"><span class="sp-num">03</span><div><h4>Trato directo y sin letra pequeña</h4><p>Soy yo quien responde, quien traduce y quien entrega. Sin intermediarios, sin agencias que suban el precio. Antes de empezar recibes un presupuesto exacto y una fecha comprometida.</p></div></div>
+        <div class="sp-item fade"><span class="sp-num">04</span><div><h4>Garantía de revisión gratuita</h4><p>Si el documento contiene cualquier error terminológico o incoherencia jurídica, lo corrijo sin coste adicional en máximo 24 horas.</p></div></div>
+        <div style="margin-top:2rem"><a href="#contacto" class="btn-gold">Consultar disponibilidad →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TARIFAS ═══ -->
+<section id="tarifas" class="sec bg-white">
+  <div class="wrap">
+    <span class="eyebrow">Tarifas orientativas</span>
+    <h2 class="sec-h">Transparencia desde el primer momento</h2>
+    <p class="sec-p">Estas son las tarifas orientativas por tipo de encargo. El presupuesto final depende del volumen, la complejidad terminológica y el plazo. Siempre recibirás un precio cerrado antes de empezar.</p>
+    <div class="tarifas-grid">
+      <div class="tarifa-card fade">
+        <span class="tarifa-tipo">Documentos simples</span>
+        <h3>Documentación civil y migratoria</h3>
+        <div class="tarifa-precio">Desde 0,08€<span> / palabra</span></div>
+        <p class="tarifa-nota">Actas, certificados, poderes simples</p>
+        <ul class="tarifa-features">
+          <li>Actas de nacimiento y matrimonio</li>
+          <li>Certificados de antecedentes</li>
+          <li>Documentos de extranjería</li>
+          <li>Entrega en 24–48 horas</li>
+          <li>Revisión terminológica incluida</li>
+        </ul>
+        <a href="#contacto" class="btn-outline" style="width:100%;justify-content:center">Solicitar presupuesto</a>
+      </div>
+      <div class="tarifa-card featured fade">
+        <span class="tarifa-tipo">Documentos especializados</span>
+        <h3>Jurídico y societario</h3>
+        <div class="tarifa-precio">Desde 0,12€<span> / palabra</span></div>
+        <p class="tarifa-nota">Contratos, escrituras, estatutos</p>
+        <ul class="tarifa-features">
+          <li>Contratos internacionales</li>
+          <li>Documentación societaria</li>
+          <li>Poderes notariales complejos</li>
+          <li>Escrituras de compraventa</li>
+          <li>Entrega en 48–72 horas</li>
+          <li>Glosario personalizado incluido</li>
+        </ul>
+        <a href="#contacto" class="btn-gold" style="width:100%;justify-content:center">Solicitar presupuesto</a>
+      </div>
+      <div class="tarifa-card fade">
+        <span class="tarifa-tipo">Documentos institucionales</span>
+        <h3>Jurídico y procesal</h3>
+        <div class="tarifa-precio">Desde 0,14€<span> / palabra</span></div>
+        <p class="tarifa-nota">Contratos complejos, documentación procesal</p>
+        <ul class="tarifa-features">
+          <li>Contratos internacionales complejos</li>
+          <li>Documentación procesal y judicial</li>
+          <li>Poderes notariales extensos</li>
+          <li>Convenios y acuerdos multilaterales</li>
+          <li>Entrega negociada por volumen</li>
+          <li>Consulta terminológica incluida</li>
+        </ul>
+        <a href="#contacto" class="btn-outline" style="width:100%;justify-content:center">Solicitar presupuesto</a>
+      </div>
+    </div>
+    <div class="tarifa-aviso fade">
+      <p><strong>¿Tienes urgencia?</strong> Los encargos con entrega en menos de 24 horas llevan un suplemento de urgencia del 25–40% sobre la tarifa base. Consúltame siempre: hago lo posible por adaptarme a tus plazos. Los precios indicados son orientativos — el presupuesto final siempre es cerrado y sin letra pequeña.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARTÍCULOS ═══ -->
+<section id="articulos" class="sec bg-warm">
+  <div class="wrap">
+    <span class="eyebrow">Blog profesional</span>
+    <h2 class="sec-h">Artículos sobre traducción jurídica</h2>
+    <p class="sec-p">Recursos y reflexiones para traductores especializados y para clientes que quieran entender mejor el proceso de traducción de documentos legales.</p>
+    <!-- LECTOR DE ARTÍCULOS (se abre sobre la página) -->
+    <div class="art-full" id="artReader">
+      <div class="art-full-inner">
+        <button class="art-full-back" onclick="closeArt()">← Volver a artículos</button>
+        <span class="art-full-cat" id="artCat"></span>
+        <h1 class="art-full-h1" id="artTitle"></h1>
+        <p class="art-full-meta" id="artMeta"></p>
+        <div class="art-full-body" id="artBody"></div>
+      </div>
+    </div>
+
+    <div class="articles-grid">
+      <!-- ARTÍCULO 1 — edita el contenido en el script al final de la página -->
+      <div class="art-card fade" onclick="openArt(0)" style="cursor:pointer">
+        <div class="art-img-photo"><img src="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/Antecedentes-Pakistan-scaled.jpg" alt="Documentos civiles de Pakistan para traducción"></div>
+        <div class="art-body">
+          <span class="art-cat">Terminología jurídica</span>
+          <h3>Los errores más frecuentes al traducir documentos civiles del francés</h3>
+          <p>Falsos amigos, calcos y errores de registro que pueden causar problemas en extranjería o en el registro civil.</p>
+          <span class="art-meta">Escribe aquí la fecha · 5 min de lectura</span>
+        </div>
+      </div>
+      <!-- ARTÍCULO 2 -->
+      <div class="art-card fade" onclick="openArt(1)" style="cursor:pointer">
+        <div class="art-img-photo"><img src="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/derecho-comparado.jpeg" alt="Derecho comparado y documentación migratoria"></div>
+        <div class="art-body">
+          <span class="art-cat">Documentación migratoria</span>
+          <h3>Qué documentos necesitas traducir para la reagrupación familiar en España</h3>
+          <p>Guía práctica sobre qué actas y certificados requiere extranjería y cómo deben estar apostillados.</p>
+          <span class="art-meta">Escribe aquí la fecha · 4 min de lectura</span>
+        </div>
+      </div>
+      <!-- ARTÍCULO 3 -->
+      <div class="art-card fade" onclick="openArt(2)" style="cursor:pointer">
+        <div class="art-img-photo"><img src="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/fotoarticulo.jpg" alt="Información que necesita tu traductor antes de empezar"></div>
+        <div class="art-body">
+          <span class="art-cat">Guía para clientes</span>
+          <h3>Qué información necesita tu traductor antes de empezar</h3>
+          <p>Todo lo que puedes compartir para ahorrar tiempo, reducir consultas y obtener un resultado más preciso.</p>
+          <span class="art-meta">Escribe aquí la fecha · 3 min de lectura</span>
+        </div>
+      </div>
+    </div>
+    <div class="art-cta">
+      <a href="#contacto" class="btn-outline">Sugerir un tema →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RECURSOS ═══ -->
+<section id="recursos" class="sec bg-white">
+  <div class="wrap recursos-grid">
+    <div>
+      <span class="eyebrow">Recursos gratuitos</span>
+      <h2 class="sec-h">Más allá de la traducción</h2>
+      <p class="sec-p">Comparto recursos útiles para traductores en formación y para clientes que quieran entender mejor sus documentos.</p>
+      <div class="rec-item fade"><div class="rec-icon">📖</div><div><h4>Glosarios jurídicos descargables</h4><p>Terminología bilingüe FR/EN–ES para documentación civil, migratoria y jurídica. Actas, certificados, contratos y más.</p></div></div>
+      <div class="rec-item fade"><div class="rec-icon">✍️</div><div><h4>Blog profesional</h4><p>Artículos sobre documentación civil y migratoria, errores frecuentes y recursos para traductores especializados.</p></div></div>
+      <div class="rec-item fade"><div class="rec-icon">📋</div><div><h4>Guías para clientes</h4><p>Cómo preparar tu documentación para una traducción eficiente y cómo reducir los plazos de entrega.</p></div></div>
+    </div>
+    <div class="glos-preview fade">
+      <div class="glos-hd"><strong>Glosario económico-financiero (muestra)</strong><span>FR / EN → ES</span></div>
+      <div class="glos-row"><span class="t">produit intérieur brut</span><span class="d">producto interior bruto (PIB)</span></div>
+      <div class="glos-row"><span class="t">évasion fiscale</span><span class="d">evasión fiscal</span></div>
+      <div class="glos-row"><span class="t">dette publique</span><span class="d">deuda pública</span></div>
+      <div class="glos-row"><span class="t">balance sheet</span><span class="d">balance de situación</span></div>
+      <div class="glos-row"><span class="t">cash flow</span><span class="d">flujo de caja / tesorería</span></div>
+      <div class="glos-row"><span class="t">taux d'intérêt directeur</span><span class="d">tipo director / de intervención</span></div>
+
+      <!-- SISTEMA DE GLOSARIOS DESCARGABLES -->
+      <div style="margin-top:1.1rem;border-top:1px solid var(--paper-bd);padding-top:1rem">
+        <p style="font-size:.78rem;font-weight:600;color:var(--ink);margin-bottom:.65rem">Descargar glosarios completos:</p>
+        <div style="display:flex;flex-direction:column;gap:.45rem">
+          <a href="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/glosario-economico-fr-es.pdf" target="_blank" rel="noopener" class="glos-dl-btn">
+            📄 Glosario económico-financiero FR → ES
+          </a>
+          <a href="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/glosario-trilingue-fr-en-es.pdf" target="_blank" rel="noopener" class="glos-dl-btn">
+            📄 Glosario trilingüe económico FR / EN → ES
+          </a>
+          <a href="https://raw.githubusercontent.com/lumeatrad/lumeatrad.github.io/main/glosario-interjecciones-fr-es.pdf" target="_blank" rel="noopener" class="glos-dl-btn">
+            📄 Glosario de interjecciones FR → ES
+          </a>
+        </div>
+        <p style="font-size:.72rem;color:var(--ink-lt);margin-top:.6rem">PDF gratuito · Descarga directa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AUTORIDAD ═══ -->
+<section class="sec bg-warm">
+  <div class="wrap">
+    <div class="aut-grid">
+      <div>
+        <span class="eyebrow">Formación y trayectoria</span>
+        <h2 class="sec-h">Una especialización que no se improvisa</h2>
+        <div class="tl">
+          <div class="tl-item fade"><div class="tl-dot"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Formación superior</span><span class="tl-title">Grado en Traducción e Interpretación — Universidad Autónoma de Madrid</span><p class="tl-sub">Formación integral en lingüística aplicada, traducción especializada e interpretación. Combinación lingüística: francés e inglés al español.</p></div></div>
+          <div class="tl-item fade"><div class="tl-dot"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Año en Francia</span><span class="tl-title">Université Rennes 2 — Bretagne, Francia</span><p class="tl-sub">Año de estudios en inmersión total en francés, con contacto directo con el sistema universitario, cultural y lingüístico francés. Experiencia fundamental para la combinación FR→ES.</p></div></div>
+          <div class="tl-item fade"><div class="tl-dot"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Prácticas profesionales</span><span class="tl-title">CBLingua — Empresa de traducción e interpretación</span><p class="tl-sub">Prácticas profesionales con traducción de documentación real: actas civiles, certificados, contratos y documentación jurídica de diversa procedencia.</p></div></div>
+          <div class="tl-item fade"><div class="tl-dot"><div class="tl-dot-in"></div></div><div><span class="tl-yr">Especialización</span><span class="tl-title">Máster en Traducción Institucional — Universidad de Alicante</span><p class="tl-sub">Posgrado oficial centrado en documentación de organismos internacionales, textos jurídico-administrativos y lenguaje de las instituciones públicas.</p></div></div>
+        </div>
+      </div>
+      <aside>
+        <div class="stat-box"><div class="stat-n">FR / EN</div><p class="stat-l">Francés e inglés al español — combinaciones lingüísticas activas</p></div>
+        <div class="stat-box"><div class="stat-n">24–72h</div><p class="stat-l">Plazo de entrega habitual según volumen y complejidad</p></div>
+        <div class="trust-badge fade"><span class="trust-badge-icon">🔒</span>Confidencialidad garantizada contractualmente</div>
+        <div class="trust-badge fade"><span class="trust-badge-icon">✅</span>Revisión terminológica incluida en cada encargo</div>
+        <div class="trust-badge fade"><span class="trust-badge-icon">📬</span>Presupuesto sin compromiso en menos de 24 horas</div>
+        <div class="trust-badge fade"><span class="trust-badge-icon">👤</span>Atención directa — sin intermediarios</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FRANCÉS ═══ -->
+<section id="fr" class="sec bg-navy" lang="fr">
+  <div class="wrap fr-grid">
+    <div>
+      <span class="eyebrow eyebrow-lt">Pour les clients francophones</span>
+      <h2 class="sec-h" style="color:#fff;font-family:'Playfair Display',serif">Traducteur juridique spécialisé,<br>à votre service en français</h2>
+      <div class="fr-txt">
+        <p>Je suis Jonathan Rodrigo Vega, traducteur juridique et institutionnel spécialisé dans la combinaison français–espagnol. Je traduis vos documents juridiques, notariaux et institutionnels vers un espagnol précis, adapté aux exigences des administrations espagnoles et des organismes européens.</p>
+        <p>Titulaire d'un Master en Traduction Institutionnelle de l'Université d'Alicante et d'une Licence en Traduction et Interprétation de l'Université Autonome de Madrid.</p>
+      </div>
+      <div style="margin-top:1.25rem">
+        <div class="fr-cred">Master en Traduction Institutionnelle — Université d'Alicante</div>
+        <div class="fr-cred">Licence en Traduction et Interprétation — UAM</div>
+        <div class="fr-cred">Spécialisation : actes d'état civil, documents migratoires, droit pénal (casiers judiciaires), contrats</div>
+        <div class="fr-cred">Délai : 24–72 h · Devis gratuit et sans engagement</div>
+      </div>
+    </div>
+    <div class="fr-card">
+      <h3>Demander un devis en français</h3>
+      <p>Envoyez-moi votre document ou décrivez votre besoin. Je vous répondrai sous 24 heures avec un devis détaillé et un délai précis.</p>
+      <p>Confidentialité totale — conformément au RGPD.</p>
+      <a href="#contacto" class="btn-gold" style="margin-top:1.4rem;width:100%;justify-content:center">Demander un devis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIOS ═══ -->
+<section id="testimonios" class="sec bg-warm">
+  <div class="wrap">
+    <span class="eyebrow">Prueba social</span>
+    <h2 class="sec-h">Lo que dicen quienes han trabajado conmigo</h2>
+    <div class="testi-grid">
+      <article class="testi-card fade">
+        <blockquote class="testi-q">Jonathan tradujo el expediente de registro de nuestra marca ante la EUIPO con una precisión terminológica que evitó cualquier objeción. El proceso fue limpio y el plazo, cumplido al día.</blockquote>
+        <footer class="testi-author"><div class="testi-av">MB</div><div><span class="testi-name">María B.</span><span class="testi-role">Directora de Expansión · Empresa de diseño, Madrid</span></div></footer>
+      </article>
+      <article class="testi-card fade">
+        <blockquote class="testi-q">Necesitaba traducir contratos del francés al español con urgencia. Entrega perfecta en 36 horas, con glosario adjunto para coherencia futura. Muy recomendable.</blockquote>
+        <footer class="testi-author"><div class="testi-av">PL</div><div><span class="testi-name">Pierre L.</span><span class="testi-role">Responsable jurídico · Empresa francesa con filial en España</span></div></footer>
+      </article>
+      <div class="testi-pending fade"><p>¿Has trabajado conmigo?<br>Me encantaría incluir tu valoración aquí.</p><a href="#contacto" class="btn-link">Enviar testimonio →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMULARIO ═══ -->
+<section id="contacto" class="sec bg-white">
+  <div class="wrap form-layout">
+    <div>
+      <span class="eyebrow">Solicitar presupuesto</span>
+      <h2 class="sec-h">Cuéntame qué necesitas</h2>
+      <p class="sec-p">Respondo en menos de 24 horas con un presupuesto exacto y una fecha comprometida. Sin letra pequeña.</p>
+      <div class="form-trust-item fade"><div class="fti-icon">🔒</div><div><h5>Confidencialidad garantizada</h5><p>Tus documentos se tratan con estricta confidencialidad conforme al RGPD. Nunca los comparto.</p></div></div>
+      <div class="form-trust-item fade"><div class="fti-icon">✅</div><div><h5>Revisión exhaustiva incluida</h5><p>Si detectas cualquier error, lo corrijo gratis en 24 horas.</p></div></div>
+      <div class="form-trust-item fade"><div class="fti-icon">📬</div><div><h5>Presupuesto sin compromiso</h5><p>Solo empezamos cuando estamos de acuerdo en precio y plazo.</p></div></div>
+      <div class="form-trust-item fade"><div class="fti-icon">⏰</div><div><h5>Respuesta en menos de 24 horas</h5><p>Incluso para proyectos urgentes.</p></div></div>
+    </div>
+    <div class="form-box">
+      <!-- Sustituye TU_ID_FORMSPREE por tu ID real de formspree.io (gratis) -->
+      <form id="jvForm" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto">
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-grid">
+          <div class="fg"><label for="f-nombre">Nombre completo *</label><input type="text" id="f-nombre" name="nombre" placeholder="Ej. María García" required></div>
+          <div class="fg"><label for="f-empresa">Empresa u organismo</label><input type="text" id="f-empresa" name="empresa" placeholder="Opcional"></div>
+          <div class="fg"><label for="f-email">Correo electrónico *</label><input type="email" id="f-email" name="email" placeholder="tu@email.com" required></div>
+          <div class="fg"><label for="f-tel">Teléfono</label><input type="tel" id="f-tel" name="telefono" placeholder="+34 600 000 000"></div>
+          <div class="fg full"><label for="f-tipo">Tipo de documento *</label>
+            <select id="f-tipo" name="tipo" required>
+              <option value="">Selecciona el tipo de documento</option>
+              <option>Contrato / acuerdo comercial</option>
+              <option>Antecedentes penales / certificados</option>
+              <option>Poder notarial / escritura</option>
+              <option>Texto institucional o legislativo</option>
+              <option>Documentación migratoria / extranjería</option>
+              <option>Documentación procesal / judicial</option>
+              <option>Otro (especificar abajo)</option>
+            </select>
+          </div>
+          <div class="fg"><label for="f-or">Idioma de origen *</label><select id="f-or" name="idioma_origen" required><option value="">Selecciona</option><option value="fr">Francés</option><option value="en">Inglés</option></select></div>
+          <div class="fg"><label>Idioma de destino</label><select disabled><option>Español</option></select></div>
+          <div class="fg full"><label for="f-plazo">¿Tienes fecha límite?</label><input type="date" id="f-plazo" name="plazo"></div>
+          <div class="fg full">
+            <label>Adjuntar documento (opcional)</label>
+            <div class="file-drop" onclick="document.getElementById('f-file').click()" role="button" tabindex="0">
+              <strong id="fn">Seleccionar archivo</strong>
+              <span id="fs">PDF, DOCX, DOC — Máx. 10 MB</span>
+              <input type="file" id="f-file" name="archivo" accept=".pdf,.doc,.docx" style="display:none">
+            </div>
+          </div>
+          <div class="fg full"><label for="f-msg">Información adicional</label><textarea id="f-msg" name="mensaje" placeholder="Describe el documento, el uso que le darás, o cualquier requisito especial..."></textarea></div>
+          <div class="fg full">
+            <div class="form-check"><input type="checkbox" id="f-priv" required><label for="f-priv" style="font-weight:400">He leído y acepto la <a href="#">Política de privacidad</a>. Mis datos se usan exclusivamente para gestionar este presupuesto.</label></div>
+          </div>
+        </div>
+        <button type="submit" class="form-submit" id="fBtn">Enviar solicitud de presupuesto →</button>
+        <p class="form-note" id="fNote">Respondo en menos de 24 horas · Sin compromiso · Confidencialidad garantizada</p>
+        <div class="form-ok" id="formOk">✓ Solicitud enviada — te respondo en menos de 24 horas.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <a href="#inicio" class="ft-logo">Jonathan <span>Vega</span></a>
+      <p>Traductor jurídico e institucional. Francés e inglés al español. Máster en Traducción Institucional, Universidad de Alicante.</p>
+      <div class="ft-langs"><a href="#">ES</a><a href="#fr">FR</a><a href="#">EN</a></div>
+    </div>
+    <div class="ft-col"><h5>Servicios</h5><ul><li><a href="#servicios">Actas civiles y matrimoniales</a></li><li><a href="#servicios">Contratos internacionales</a></li><li><a href="#servicios">Poderes notariales</a></li><li><a href="#servicios">Textos institucionales</a></li><li><a href="#servicios">Documentación migratoria</a></li></ul></div>
+    <div class="ft-col"><h5>Información</h5><ul><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#tarifas">Tarifas</a></li><li><a href="#articulos">Artículos</a></li><li><a href="#recursos">Recursos y glosarios</a></li><li><a href="#fr">Page en français</a></li></ul></div>
+    <div class="ft-col"><h5>Legal y contacto</h5><ul><li><a href="#">Aviso legal</a></li><li><a href="#">Política de privacidad</a></li><li><a href="#">Política de cookies</a></li><li><a href="mailto:contacto@jonathanrodrigovega.es">contacto@jonathanrodrigovega.es</a></li><li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="ft-bot">
+    <p>© 2025 Jonathan Rodrigo Vega · Todos los derechos reservados</p>
+    <div class="ft-cta"><a href="#contacto">Solicitar presupuesto →</a></div>
+  </div>
+</footer>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+// Animaciones scroll
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('on'); }), {threshold:.1});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+// Menú hamburger mobile
+function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu(){ document.getElementById('mobileMenu').classList.remove('open'); }
+
+// Fecha mínima
+const dp = document.getElementById('f-plazo');
+if(dp) dp.min = new Date().toISOString().split('T')[0];
+
+// Nombre archivo
+document.getElementById('f-file').addEventListener('change', function(){
+  if(this.files && this.files[0]){
+    document.getElementById('fn').textContent = this.files[0].name;
+    document.getElementById('fs').textContent = (this.files[0].size/1024/1024).toFixed(2)+' MB';
+  }
+});
+
+// Submit formulario
+document.getElementById('jvForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = document.getElementById('fBtn');
+  const note = document.getElementById('fNote');
+  const ok = document.getElementById('formOk');
+  if(!document.getElementById('f-nombre').value.trim() ||
+     !document.getElementById('f-email').value.trim() ||
+     !document.getElementById('f-tipo').value ||
+     !document.getElementById('f-or').value ||
+     !document.getElementById('f-priv').checked){
+    note.textContent = 'Por favor completa todos los campos obligatorios (*).';
+    note.style.color = '#C0392B';
+    return;
+  }
+  btn.textContent = 'Enviando…'; btn.disabled = true;
+  try {
+    const res = await fetch(this.action, {method:'POST', body: new FormData(this), headers:{Accept:'application/json'}});
+    if(res.ok){ btn.style.display='none'; note.style.display='none'; ok.style.display='block'; this.reset(); }
+    else throw new Error();
+  } catch {
+    btn.textContent = 'Enviar solicitud de presupuesto →'; btn.disabled = false;
+    note.textContent = 'Error al enviar. Escríbeme a contacto@jonathanrodrigovega.es'; note.style.color = '#C0392B';
+  }
+});
+
+// Smooth scroll
+
+
+// ═══ SISTEMA DE ARTÍCULOS ═══
+// Para editar un artículo: cambia el texto dentro de cada objeto { } abajo.
+// El campo "body" acepta HTML: <h2>, <h3>, <p>, <ul><li>, <strong>, <blockquote>
+const articulos = [
+  {
+    cat: 'Terminología jurídica',
+    title: 'Los errores más frecuentes al traducir documentos civiles del francés',
+    meta: 'Autor: Jonathan Rodrigo Vega · Junio 2025 · 5 min de lectura',
+    body: `
+      <p>Cuando una persona llega a España con documentación procedente de un país francófono, lo primero que necesita es que esos documentos sean reconocibles para las administraciones españolas. Una mala traducción puede costar meses de espera, denegaciones o incluso la pérdida de un trámite.</p>
+      <p>Aquí van los errores más habituales que veo en mi trabajo cotidiano:</p>
+      <h2>1. Traducir "acte de naissance" simplemente como "acta de nacimiento"</h2>
+      <p>En principio es correcto, pero en la documentación española se distingue entre <strong>acta</strong> (documento registral original) y <strong>partida</strong> (certificación del acta). Según el contexto y el organismo destinatario, usar un término u otro puede generar problemas. Un traductor especializado sabe cuándo usar cada uno.</p>
+      <h2>2. El falso amigo "casier judiciaire"</h2>
+      <p>Muchos traductores no especializados lo traducen como "cajón judicial" o incluso lo dejan en francés. La traducción correcta es <strong>certificado de antecedentes penales</strong>. Es uno de los documentos más frecuentes en trámites de residencia y su correcta identificación es esencial.</p>
+      <h2>3. Ignorar las variaciones entre países francófonos</h2>
+      <p>El francés de Senegal, el de Marruecos y el de Francia no son idénticos en terminología administrativa. Un acta de nacimiento senegalesa puede tener campos que no existen en el modelo francés europeo. Conocer estas diferencias es fundamental.</p>
+      <h2>4. Traducción literal de fórmulas administrativas</h2>
+      <p>Las fórmulas de cierre de documentos oficiales francófonos no tienen equivalente literal en español. "Le présent acte est certifié sincère et véritable" no se traduce palabra por palabra: requiere adaptación al estilo notarial o registral español.</p>
+      <blockquote>Una traducción no es solo trasladar palabras: es hacer que un documento funcione en otro sistema jurídico y administrativo.</blockquote>
+      <p>Si tienes dudas sobre cómo debe estar traducido tu documento, puedes <a href="#contacto" style="color:var(--gold)">consultarme sin compromiso</a>.</p>
+    `
+  },
+  {
+    cat: 'Documentación migratoria',
+    title: 'Qué documentos necesitas traducir para la reagrupación familiar en España',
+    meta: 'Autor: Jonathan Rodrigo Vega · Junio 2025 · 4 min de lectura',
+    body: `
+      <p>La reagrupación familiar es uno de los trámites migratorios más habituales y también uno de los que más documentación exige. Aquí tienes una guía básica de qué hay que traducir y por qué.</p>
+      <h2>Documentos del familiar que reagrupa (el que está en España)</h2>
+      <ul>
+        <li>No suelen requerir traducción, ya que están emitidos en España.</li>
+        <li>Si hay documentos de su país de origen (actas de nacimiento, matrimonio), sí necesitan traducción.</li>
+      </ul>
+      <h2>Documentos del familiar que viene</h2>
+      <ul>
+        <li><strong>Acta de nacimiento:</strong> siempre requerida. Debe estar apostillada o legalizada según el país de origen.</li>
+        <li><strong>Acta de matrimonio</strong> (si aplica): ídem.</li>
+        <li><strong>Certificado de antecedentes penales</strong> del país de origen: obligatorio para mayores de 18 años.</li>
+        <li><strong>Pasaporte:</strong> no necesita traducción, pero sí compulsa en algunos casos.</li>
+      </ul>
+      <h2>¿Necesitan apostilla?</h2>
+      <p>Depende del país. Los países que han firmado el Convenio de La Haya usan apostilla. Los que no lo han firmado requieren legalización consular. En ambos casos, la traducción va después de la apostilla o legalización, nunca antes.</p>
+      <h2>Plazos a tener en cuenta</h2>
+      <p>Extranjería suele tardar entre 3 y 6 meses en resolver. Tener toda la documentación bien traducida desde el principio evita requerimientos que alargan el proceso varios meses más.</p>
+      <p>¿Tienes dudas sobre tu caso concreto? <a href="#contacto" style="color:var(--gold)">Cuéntame qué documentos tienes</a> y te digo exactamente qué necesitas.</p>
+    `
+  },
+  {
+    cat: 'Guía para clientes',
+    title: 'Qué información necesita tu traductor antes de empezar',
+    meta: 'Autor: Jonathan Rodrigo Vega · Junio 2025 · 3 min de lectura',
+    body: `
+      <p>Muchas veces los encargos se demoran más de lo necesario porque el traductor necesita hacer preguntas que podrían haberse respondido desde el principio. Aquí tienes lo que marca la diferencia:</p>
+      <h2>1. Para qué va a usarse el documento</h2>
+      <p>No es lo mismo traducir un acta de nacimiento para presentarla en el registro civil que para usarla en un juicio. El registro terminológico y el formato pueden variar. Cuéntame siempre el destino final del documento.</p>
+      <h2>2. El organismo receptor</h2>
+      <p>¿Es para extranjería, para un notario, para un tribunal, para una empresa privada? Cada organismo tiene sus expectativas sobre cómo debe presentarse la traducción. Saberlo de antemano evita tener que rehacerla.</p>
+      <h2>3. Si hay apostilla o legalización</h2>
+      <p>Envíame el documento ya apostillado si es posible. La apostilla forma parte del documento y en algunos casos su contenido también se traduce. Si me lo mandas sin ella, puede que tenga que revisarlo cuando llegue.</p>
+      <h2>4. La fecha límite real</h2>
+      <p>Dime cuándo lo necesitas de verdad, no cuándo crees que lo necesitas. Si tienes una cita en extranjería el día 15, dímelo: así organizo la entrega con margen y sin urgencias de último momento.</p>
+      <h2>5. Contexto del documento</h2>
+      <p>Si el documento es de Senegal, Pakistán, Filipinas o cualquier otro país con un sistema registral específico, cuéntamelo. Cada sistema tiene sus particularidades y conocerlas de antemano mejora el resultado.</p>
+      <p>Con esta información puedo darte un presupuesto más preciso, un plazo más realista y un resultado mejor. <a href="#contacto" style="color:var(--gold)">Escríbeme cuando quieras.</a></p>
+    `
+  }
+];
+
+function openArt(i) {
+  const a = articulos[i];
+  document.getElementById('artCat').textContent = a.cat;
+  document.getElementById('artTitle').textContent = a.title;
+  document.getElementById('artMeta').textContent = a.meta;
+  document.getElementById('artBody').innerHTML = a.body;
+  const reader = document.getElementById('artReader');
+  reader.classList.add('open');
+  reader.scrollTo(0, 0);
+  document.body.style.overflow = 'hidden';
+}
+function closeArt() {
+  document.getElementById('artReader').classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Cerrar con ESC
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeArt(); });
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e){
+    const t = document.querySelector(this.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 70, behavior:'smooth'}); closeMenu(); }
+  });
+});
+</script>
+</body>
+</html>
